@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+; Right-click ON a folder
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\OpenWithKiro]
+@="Open with Kiro"
+"Icon"="\"C:\\Users\\shubh\\AppData\\Local\\Programs\\Kiro\\Kiro.exe\""
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\OpenWithKiro\command]
+@="\"C:\\Users\\shubh\\AppData\\Local\\Programs\\Kiro\\Kiro.exe\" \"%V\""
+
+; Right-click INSIDE a folder (on background)
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\OpenWithKiro]
+@="Open with Kiro"
+"Icon"="\"C:\\Users\\shubh\\AppData\\Local\\Programs\\Kiro\\Kiro.exe\""
+
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\OpenWithKiro\command]
+@="\"C:\\Users\\shubh\\AppData\\Local\\Programs\\Kiro\\Kiro.exe\" \"%W\""
