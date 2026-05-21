@@ -9,7 +9,7 @@ import { getContacts, getIdeas } from "@/lib/api";
 
 type Tab = "contacts" | "ideas";
 
-interface ContactRow {
+interface ContactRow extends Record<string, unknown> {
   id: number;
   name: string;
   email: string;
@@ -18,7 +18,7 @@ interface ContactRow {
   created_at: string;
 }
 
-interface IdeaRow {
+interface IdeaRow extends Record<string, unknown> {
   id: number;
   name: string;
   email: string;
@@ -66,14 +66,14 @@ export default function AdminPage() {
     { key: "email" as keyof ContactRow, label: "Email" },
     { key: "phone" as keyof ContactRow, label: "Phone" },
     { key: "message" as keyof ContactRow, label: "Message" },
-    { key: "created_at" as keyof ContactRow, label: "Date", render: (v: ContactRow[keyof ContactRow]) => new Date(String(v)).toLocaleString() },
+    { key: "created_at" as keyof ContactRow, label: "Date", render: (v: unknown) => new Date(String(v)).toLocaleString() },
   ];
 
   const ideaColumns = [
     { key: "name" as keyof IdeaRow, label: "Name" },
     { key: "email" as keyof IdeaRow, label: "Email" },
     { key: "idea_details" as keyof IdeaRow, label: "Idea" },
-    { key: "created_at" as keyof IdeaRow, label: "Date", render: (v: IdeaRow[keyof IdeaRow]) => new Date(String(v)).toLocaleString() },
+    { key: "created_at" as keyof IdeaRow, label: "Date", render: (v: unknown) => new Date(String(v)).toLocaleString() },
   ];
 
   return (
