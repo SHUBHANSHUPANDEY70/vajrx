@@ -3,7 +3,6 @@ import "./globals.css";
 import dynamic from "next/dynamic";
 
 const EarthGlobe = dynamic(() => import("@/components/organisms/EarthGlobe"), { ssr: false });
-const SpaceCanvas = dynamic(() => import("@/components/organisms/SpaceCanvas"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "VajrX Technology — Forged for the Frontier",
@@ -25,8 +24,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {/* Earth canvas — fixed, covers full viewport, paints space+stars+globe */}
         <EarthGlobe />
-        {/* Meteor streaks */}
-        <SpaceCanvas />
         {/* Page content at z-index:2 — transparent sections composite against Earth below */}
         <div className="relative" style={{ zIndex: 2 }}>
           {children}
