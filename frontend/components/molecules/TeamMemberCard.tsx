@@ -9,22 +9,10 @@ interface TeamMemberCardProps {
   featured?: boolean;
 }
 
-export default function TeamMemberCard({
-  name,
-  title,
-  bio,
-  imageSrc,
-  featured = false,
-}: TeamMemberCardProps) {
+export default function TeamMemberCard({ name, title, bio, imageSrc, featured = false }: TeamMemberCardProps) {
   return (
-    <div
-      className={`group h-full bg-surface border ${
-        featured ? "border-accent/40" : "border-border"
-      } hover:border-accent/30 transition-all duration-300 overflow-hidden flex flex-col relative`}
-    >
-      {featured && (
-        <div className="absolute top-0 left-0 right-0 h-px bg-accent/50" />
-      )}
+    <div className={`group h-full bg-surface border ${featured ? "border-accent/50" : "border-border"} hover:border-accent/40 transition-all duration-300 overflow-hidden flex flex-col shadow-sm hover:shadow-md`}>
+      {featured && <div className="h-px bg-accent" />}
 
       <div className="relative w-full aspect-square bg-navy overflow-hidden">
         <Image
@@ -39,14 +27,13 @@ export default function TeamMemberCard({
             Founder
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
       <div className="p-6 flex flex-col gap-2 flex-1">
-        <h3 className="font-display font-bold text-lg text-white group-hover:text-accent transition-colors duration-300">
+        <h3 className="font-display font-bold text-lg text-foreground group-hover:text-accent transition-colors duration-300">
           {name}
         </h3>
-        <p className="font-mono text-xs text-accent/80 tracking-wide uppercase">{title}</p>
+        <p className="font-mono text-xs text-accent tracking-wide uppercase">{title}</p>
         <p className="text-muted text-sm leading-relaxed mt-2">{bio}</p>
       </div>
     </div>

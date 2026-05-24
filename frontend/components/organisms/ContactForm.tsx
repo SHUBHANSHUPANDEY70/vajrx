@@ -4,19 +4,8 @@ import FormField from "@/components/molecules/FormField";
 import Button from "@/components/atoms/Button";
 import { postContact } from "@/lib/api";
 
-interface FormState {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-}
-
-interface FormErrors {
-  name?: string;
-  email?: string;
-  phone?: string;
-  message?: string;
-}
+interface FormState { name: string; email: string; phone: string; message: string; }
+interface FormErrors { name?: string; email?: string; phone?: string; message?: string; }
 
 function validate(form: FormState): FormErrors {
   const errors: FormErrors = {};
@@ -56,8 +45,8 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="bg-green-900/20 border border-green-700/50 rounded-sm p-8 text-center">
-        <p className="text-green-400 text-lg font-semibold mb-2">Message sent.</p>
+      <div className="bg-green-50 border border-green-200 p-8 text-center">
+        <p className="text-green-700 text-lg font-semibold mb-2">Message sent.</p>
         <p className="text-muted text-sm">We'll get back to you at {form.email || "your email"} shortly.</p>
         <button onClick={() => setStatus("idle")} className="mt-4 text-accent text-sm hover:underline">
           Send another message
@@ -70,10 +59,10 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
       <FormField id="name" label="Full Name" placeholder="Shubhanshu Pandey" value={form.name} onChange={handleChange} error={errors.name} required />
       <FormField id="email" label="Email Address" type="email" placeholder="contact@vajrx.com" value={form.email} onChange={handleChange} error={errors.email} required />
-      <FormField id="phone" label="Phone Number" type="tel" placeholder="+91 6266995073" value={form.phone} onChange={handleChange} error={errors.phone} required />
+      <FormField id="phone" label="Phone Number" type="tel" placeholder="+91 62669 95073" value={form.phone} onChange={handleChange} error={errors.phone} required />
       <FormField id="message" label="Message" placeholder="Tell us what you have in mind..." value={form.message} onChange={handleChange} error={errors.message} required multiline rows={5} />
       {status === "error" && (
-        <p className="text-red-400 text-sm bg-red-900/20 border border-red-700/50 rounded-sm px-4 py-3">{errorMsg}</p>
+        <p className="text-red-600 text-sm bg-red-50 border border-red-200 px-4 py-3">{errorMsg}</p>
       )}
       <Button type="submit" disabled={status === "loading"} fullWidth>
         {status === "loading" ? "Sending..." : "Send Message"}

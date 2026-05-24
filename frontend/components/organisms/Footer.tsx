@@ -18,7 +18,6 @@ export default function Footer() {
   return (
     <footer className="bg-navy border-t border-border">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Main footer grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-14">
           {/* Brand */}
           <div className="lg:col-span-2 flex flex-col gap-5">
@@ -31,7 +30,7 @@ export default function Footer() {
               <span className="font-mono text-xs text-muted/60 tracking-wide">Jabalpur, Madhya Pradesh, India</span>
             </div>
             <p className="font-mono text-xs text-muted/40 leading-relaxed max-w-sm">
-              VajrX is a pre-revenue technology startup in active development phase. All projects are original, indigenously conceived and engineered.
+              VajrX Technology is a pre-revenue startup in active development. All projects are original, indigenously conceived and engineered.
             </p>
           </div>
 
@@ -43,7 +42,7 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="group flex items-center gap-2 text-sm text-muted hover:text-white transition-colors duration-200"
+                  className="group flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors duration-200"
                 >
                   <span className="h-px w-3 bg-border group-hover:bg-accent group-hover:w-4 transition-all duration-200" />
                   {link.label}
@@ -63,29 +62,22 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h4 className="font-mono text-xs text-muted tracking-[0.2em] uppercase">Contact</h4>
             <div className="flex flex-col gap-2.5">
-              <a
-                href="mailto:contact@vajrx.com"
-                className="text-sm text-muted hover:text-accent transition-colors duration-200"
-              >
+              <a href="mailto:contact@vajrx.com" className="text-sm text-muted hover:text-accent transition-colors duration-200">
                 contact@vajrx.com
               </a>
-              <a
-                href="tel:+916266995073"
-                className="text-sm text-muted hover:text-accent transition-colors duration-200 font-mono"
-              >
+              <a href="tel:+916266995073" className="font-mono text-sm text-muted hover:text-accent transition-colors duration-200">
                 +91 6266995073
               </a>
-              <span className="text-sm text-muted/60">vajrx.com</span>
+              <a href="tel:+918103882405" className="font-mono text-sm text-muted hover:text-accent transition-colors duration-200">
+                +91 81038 82405
+              </a>
+              <span className="text-sm text-muted/50">vajrx.com</span>
             </div>
 
             <h4 className="font-mono text-xs text-muted tracking-[0.2em] uppercase mt-4">Domains</h4>
             <div className="flex flex-col gap-2">
               {domains.map((d) => (
-                <Link
-                  key={d.label}
-                  href={d.href}
-                  className="text-sm text-muted hover:text-white transition-colors duration-200"
-                >
+                <Link key={d.label} href={d.href} className="text-sm text-muted hover:text-foreground transition-colors duration-200">
                   {d.label}
                 </Link>
               ))}
@@ -93,7 +85,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar */}
         <div className="border-t border-border py-5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-mono text-xs text-muted/50">
             &copy; {new Date().getFullYear()} VajrX Technology. All rights reserved.

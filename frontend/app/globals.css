@@ -15,8 +15,8 @@ html {
 }
 
 body {
-  background-color: #08090C;
-  color: #E8EDF5;
+  background-color: #F5F7FA;
+  color: #0D1117;
   font-family: 'IBM Plex Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,71 +32,30 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #08090C;
+  background: #F5F7FA;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1E2533;
+  background: #CBD5E1;
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3B82F6;
+  background: #2563EB;
 }
 
 .font-display {
   font-family: 'Syne', system-ui, sans-serif;
 }
 
-/* Technical grid overlay */
 .tech-grid {
   background-image:
-    linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
   background-size: 80px 80px;
 }
 
-/* Corner mark decorator */
-.corner-mark::before,
-.corner-mark::after {
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border-color: rgba(59, 130, 246, 0.4);
-  border-style: solid;
-}
-
-.corner-mark::before {
-  top: 0;
-  left: 0;
-  border-width: 1px 0 0 1px;
-}
-
-.corner-mark::after {
-  bottom: 0;
-  right: 0;
-  border-width: 0 1px 1px 0;
-}
-
-/* Refined number display */
 .tabular-nums {
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum";
-}
-
-/* Hover reveal animation */
-@keyframes slideReveal {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.reveal-on-hover {
-  animation: slideReveal 0.25s ease-out forwards;
 }

@@ -6,12 +6,12 @@ import Link from "next/link";
 
 export default function FeaturedProjects() {
   return (
-    <section className="py-28 px-6 bg-navy/10">
+    <section className="py-28 px-6 bg-navy/40">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
             <p className="font-mono text-xs text-accent tracking-[0.25em] uppercase mb-3">Portfolio</p>
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-white leading-tight mb-3">
+            <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground leading-tight mb-3">
               Current Projects
             </h2>
             <div className="flex items-center gap-3 mb-4">
@@ -19,7 +19,7 @@ export default function FeaturedProjects() {
               <div className="h-px w-4 bg-accent/30" />
             </div>
             <p className="text-muted text-base max-w-lg leading-relaxed">
-              Active builds and completed systems. Hover any card to see key highlights. Each project represents a step toward engineering sovereignty.
+              Active builds and completed systems. Hover any card to see key highlights. Each project is a step toward engineering sovereignty.
             </p>
           </div>
           <Link
@@ -46,16 +46,15 @@ export default function FeaturedProjects() {
           ))}
         </div>
 
-        {/* Bottom note */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="mt-12 flex items-center gap-4 border-t border-border/40 pt-8"
+          className="mt-12 flex items-center gap-4 border-t border-border pt-8"
         >
           <span className="font-mono text-xs text-muted/50">More projects in development.</span>
-          <div className="h-px flex-1 bg-border/40 max-w-[120px]" />
+          <div className="h-px flex-1 bg-border max-w-[120px]" />
           <Link href="/submit-idea" className="font-mono text-xs text-accent/70 hover:text-accent transition-colors duration-200">
             Have an idea? Submit it &#8594;
           </Link>

@@ -7,15 +7,15 @@ interface BadgeProps {
 }
 
 const domainColors: Record<ProjectDomain, string> = {
-  Electronics: "bg-blue-900/40 text-blue-300 border border-blue-700/50",
-  Defence: "bg-olive/30 text-green-300 border border-olive/50",
-  Medical: "bg-red-900/30 text-red-300 border border-red-700/50",
+  Electronics: "bg-blue-50 text-blue-700 border border-blue-200",
+  Defence: "bg-green-50 text-green-800 border border-green-200",
+  Medical: "bg-red-50 text-red-700 border border-red-200",
 };
 
 export default function Badge({ domain, className = "" }: BadgeProps) {
   return (
     <span
-      className={`inline-flex items-center px-2.5 py-0.5 rounded-sm text-xs font-medium tracking-wider uppercase ${domainColors[domain]} ${className}`}
+      className={`inline-flex items-center px-2.5 py-0.5 text-xs font-mono font-medium tracking-wider uppercase ${domainColors[domain]} ${className}`}
     >
       {domain}
     </span>

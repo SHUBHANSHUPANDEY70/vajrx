@@ -18,7 +18,7 @@ export default function NavLink({ href, children, onClick }: NavLinkProps) {
       href={href}
       onClick={onClick}
       className={`font-mono text-xs tracking-widest uppercase transition-colors duration-200 relative group ${
-        isActive ? "text-accent" : "text-muted hover:text-white"
+        isActive ? "text-accent" : "text-muted hover:text-foreground"
       }`}
     >
       {children}

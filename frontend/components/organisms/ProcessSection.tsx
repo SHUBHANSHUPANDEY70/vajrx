@@ -5,29 +5,25 @@ const steps = [
   {
     number: "01",
     title: "Ideate",
-    description:
-      "Submit your problem statement or concept. We review every submission with attention to technical feasibility, national relevance, and potential for indigenization.",
+    description: "Submit your problem statement or concept. We review every submission with attention to technical feasibility, national relevance, and potential for indigenization.",
     detail: "Online submission form with structured intake",
   },
   {
     number: "02",
     title: "Evaluate",
-    description:
-      "Our team conducts a technical and feasibility analysis. We assess complexity, required resources, timelines, and strategic fit within our engineering domains.",
-    detail: "24-48 hour response time on all submissions",
+    description: "Our team conducts a technical and feasibility analysis. We assess complexity, required resources, timelines, and strategic fit within our engineering domains.",
+    detail: "24–48 hour response time on all submissions",
   },
   {
     number: "03",
     title: "Engineer",
-    description:
-      "We develop the solution using a rigorous design-build-test methodology. Every component is documented, every decision is justified, and every prototype is stress-tested.",
+    description: "We develop the solution using a rigorous design-build-test methodology. Every component is documented, every decision is justified, and every prototype is stress-tested.",
     detail: "Full documentation and version control throughout",
   },
   {
     number: "04",
     title: "Deliver",
-    description:
-      "Tested, documented, and ready for deployment. We hand off a working system with full technical documentation, source code, and integration guides.",
+    description: "Tested, documented, and ready for deployment. We hand off a working system with full technical documentation, source code, and integration guides.",
     detail: "Complete handoff with source code and schematics",
   },
 ];
@@ -45,9 +41,7 @@ export default function ProcessSection() {
               transition={{ duration: 0.5 }}
             >
               <p className="font-mono text-xs text-accent tracking-[0.25em] uppercase mb-3">Methodology</p>
-              <h2 className="font-display font-bold text-3xl md:text-4xl text-white leading-tight mb-5">
-                How We Build
-              </h2>
+              <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground leading-tight mb-5">How We Build</h2>
               <div className="flex items-center gap-3 mb-6">
                 <div className="h-px w-8 bg-accent" />
                 <div className="h-px w-4 bg-accent/30" />
@@ -62,7 +56,7 @@ export default function ProcessSection() {
           </div>
 
           <div className="lg:col-span-8">
-            <div className="flex flex-col gap-0 border border-border divide-y divide-border">
+            <div className="flex flex-col gap-0 border border-border divide-y divide-border shadow-sm bg-surface">
               {steps.map((step, i) => (
                 <motion.div
                   key={step.number}
@@ -70,7 +64,7 @@ export default function ProcessSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.45 }}
-                  className="group p-8 hover:bg-surface transition-all duration-300 relative overflow-hidden"
+                  className="group p-8 hover:bg-surface-raised transition-all duration-300 relative overflow-hidden"
                 >
                   <div className="absolute left-0 top-0 bottom-0 w-px bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="grid grid-cols-12 gap-6 items-start">
@@ -80,13 +74,11 @@ export default function ProcessSection() {
                       </span>
                     </div>
                     <div className="col-span-10">
-                      <h3 className="font-display font-bold text-xl text-white mb-2 group-hover:text-accent transition-colors duration-300">
+                      <h3 className="font-display font-bold text-xl text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
                         {step.title}
                       </h3>
                       <p className="text-muted text-sm leading-relaxed mb-3">{step.description}</p>
-                      <p className="font-mono text-xs text-accent/60 group-hover:text-accent/80 transition-colors duration-300">
-                        {step.detail}
-                      </p>
+                      <p className="font-mono text-xs text-accent/60 group-hover:text-accent/80 transition-colors duration-300">{step.detail}</p>
                     </div>
                   </div>
                 </motion.div>

@@ -12,7 +12,7 @@ const partners = [
 
 export default function CredibilityBanner() {
   return (
-    <section className="py-24 px-6 bg-navy/20 border-y border-border">
+    <section className="py-24 px-6 bg-background border-y border-border">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-12">
           <div className="lg:col-span-4">
@@ -22,12 +22,8 @@ export default function CredibilityBanner() {
               viewport={{ once: true }}
               transition={{ duration: 0.45 }}
             >
-              <p className="font-mono text-xs text-accent tracking-[0.25em] uppercase mb-3">
-                Institutional Affiliations
-              </p>
-              <h2 className="font-display font-bold text-3xl text-white leading-tight mb-4">
-                Trusted By
-              </h2>
+              <p className="font-mono text-xs text-accent tracking-[0.25em] uppercase mb-3">Institutional Affiliations</p>
+              <h2 className="font-display font-bold text-3xl text-foreground leading-tight mb-4">Trusted By</h2>
               <div className="flex items-center gap-3 mb-5">
                 <div className="h-px w-8 bg-accent" />
                 <div className="h-px w-4 bg-accent/30" />
@@ -39,7 +35,7 @@ export default function CredibilityBanner() {
           </div>
 
           <div className="lg:col-span-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 border border-border divide-x divide-y divide-border">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 border border-border divide-x divide-y divide-border shadow-sm">
               {partners.map((p, i) => (
                 <motion.div
                   key={p.name}
@@ -51,26 +47,22 @@ export default function CredibilityBanner() {
                   <CredibilityItem name={p.name} subtitle={p.subtitle} />
                 </motion.div>
               ))}
-              {/* Filler cell for grid alignment */}
-              <div className="hidden lg:block p-6 bg-surface/20">
-                <p className="font-mono text-xs text-muted/30 leading-relaxed">
-                  More partnerships in progress.
-                </p>
+              <div className="hidden lg:block p-6 bg-surface-raised">
+                <p className="font-mono text-xs text-muted/40 leading-relaxed">More partnerships in progress.</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom disclaimer */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="border-t border-border/40 pt-6"
+          className="border-t border-border pt-6"
         >
           <p className="font-mono text-xs text-muted/40 max-w-2xl">
-            Affiliations represent research collaborations, internship environments, and project development contexts. VajrX operates independently as a technology startup.
+            Affiliations represent research collaborations, internship environments, and project development contexts. VajrX Technology operates independently as a technology startup.
           </p>
         </motion.div>
       </div>

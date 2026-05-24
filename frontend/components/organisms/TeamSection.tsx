@@ -7,23 +7,23 @@ const team = [
   {
     name: "Shubhanshu Pandey",
     title: "Founder & Director",
-    bio: "Electrical Engineering student with a strong focus on R&D and embedded systems. Research Intern at NRSC, ISRO, working on indigenization of LDSN lightning detection devices and NavIC integration. National-level aerospace modeling recognition (ISROxIITR 2024). Driving VajrX's vision of indigenous engineering across defence and electronics.",
+    bio: "Electrical Engineering student with a strong focus on R&D and embedded systems. Research Intern at NRSC, ISRO, working on indigenization of LDSN lightning detection devices and NavIC integration. National-level aerospace modeling recognition (ISROxIITR 2024). Driving VajrX Technology's vision of indigenous engineering across defence and electronics.",
     imageSrc: "/team/shubhanshu.svg",
     featured: true,
   },
   {
     name: "Subrato Malvia",
-    title: "Director",
-    bio: "Electrical Engineer specializing in embedded systems, intelligent sensing technologies, and high-reliability electronic system design. Leads development of next-generation sensing and embedded platforms for defence, aerospace, and medical applications at VajrX.",
+    title: "Founder & Director",
+    bio: "Electrical Engineer specializing in embedded systems, intelligent sensing technologies, and high-reliability electronic system design. Leads development of next-generation sensing and embedded platforms for defence, aerospace, and medical applications at VajrX Technology.",
     imageSrc: "/team/subrato.svg",
-    featured: false,
+    featured: true,
   },
   {
     name: "Avani Pandit",
-    title: "Director",
+    title: "Founder & Director",
     bio: "Electrical systems engineer and defence-technology entrepreneur. Professional formation at ISRO (NRSC), DRDO-affiliated environments, Army Base Workshop 506, and IISc. Expert in signal processing, embedded architectures, and secure electrical infrastructures.",
     imageSrc: "/team/avani.svg",
-    featured: false,
+    featured: true,
   },
 ];
 
@@ -31,7 +31,7 @@ export default function TeamSection() {
   return (
     <section className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <SectionTitle label="Leadership" subtitle="The engineers and entrepreneurs building VajrX.">
+        <SectionTitle label="Leadership" subtitle="The founders and engineers building VajrX Technology.">
           Our Team
         </SectionTitle>
 

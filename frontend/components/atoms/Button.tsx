@@ -21,8 +21,9 @@ const variantClasses: Record<Variant, string> = {
   primary:
     "bg-accent text-white hover:bg-accent-hover border border-accent hover:border-accent-hover",
   secondary:
-    "bg-surface text-white hover:bg-surface-raised border border-border hover:border-muted",
-  ghost: "bg-transparent text-slate-300 hover:text-white hover:bg-surface border border-transparent",
+    "bg-surface text-foreground hover:bg-surface-raised border border-border hover:border-muted",
+  ghost:
+    "bg-transparent text-foreground hover:text-accent hover:bg-navy border border-transparent",
   outline:
     "bg-transparent text-accent hover:bg-accent hover:text-white border border-accent/60 hover:border-accent",
 };
@@ -55,12 +56,7 @@ export default function Button({
   }
 
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
-      className={base}
-    >
+    <button type={type} onClick={onClick} disabled={disabled} className={base}>
       {children}
     </button>
   );
