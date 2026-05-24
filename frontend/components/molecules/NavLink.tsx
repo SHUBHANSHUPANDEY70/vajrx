@@ -17,13 +17,13 @@ export default function NavLink({ href, children, onClick }: NavLinkProps) {
     <Link
       href={href}
       onClick={onClick}
-      className={`text-sm font-medium tracking-wide transition-colors duration-200 relative group ${
-        isActive ? "text-accent" : "text-slate-300 hover:text-white"
+      className={`font-mono text-xs tracking-widest uppercase transition-colors duration-200 relative group ${
+        isActive ? "text-accent" : "text-muted hover:text-white"
       }`}
     >
       {children}
       <span
-        className={`absolute -bottom-1 left-0 h-px bg-accent transition-all duration-200 ${
+        className={`absolute -bottom-1 left-0 h-px bg-accent transition-all duration-300 ${
           isActive ? "w-full" : "w-0 group-hover:w-full"
         }`}
       />

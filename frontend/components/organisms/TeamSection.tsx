@@ -21,7 +21,7 @@ const team = [
   {
     name: "Avani Pandit",
     title: "Director",
-    bio: "Electrical systems engineer and defence-technology entrepreneur. Professional formation at ISRO (NRSC), DRDO-affiliated environments, Army Base Workshop 506, and IISc. Expert in signal processing, embedded architectures, and secure electrical infrastructures. Passionate about BioTechnology-oriented solutions.",
+    bio: "Electrical systems engineer and defence-technology entrepreneur. Professional formation at ISRO (NRSC), DRDO-affiliated environments, Army Base Workshop 506, and IISc. Expert in signal processing, embedded architectures, and secure electrical infrastructures.",
     imageSrc: "/team/avani.svg",
     featured: false,
   },
@@ -29,32 +29,21 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <SectionTitle subtitle="The people building VajrX.">
+        <SectionTitle label="Leadership" subtitle="The engineers and entrepreneurs building VajrX.">
           Our Team
         </SectionTitle>
-        {/* Founder — full width on mobile, prominent on desktop */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mb-6"
-        >
-          <div className="md:max-w-sm">
-            <TeamMemberCard {...team[0]} />
-          </div>
-        </motion.div>
-        {/* Directors */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {team.slice(1).map((member, i) => (
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {team.map((member, i) => (
             <motion.div
               key={member.name}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.5 }}
+              transition={{ delay: i * 0.12, duration: 0.45 }}
+              className="h-full"
             >
               <TeamMemberCard {...member} />
             </motion.div>

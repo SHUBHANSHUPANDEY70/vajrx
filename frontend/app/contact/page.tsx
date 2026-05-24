@@ -1,49 +1,105 @@
 "use client";
+import { motion } from "framer-motion";
 import PageLayout from "@/components/templates/PageLayout";
 import ContactForm from "@/components/organisms/ContactForm";
-import SectionTitle from "@/components/atoms/SectionTitle";
 
 export default function ContactPage() {
   return (
     <PageLayout>
-      <div className="pt-24 py-24 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
-          {/* Left */}
-          <div>
-            <SectionTitle subtitle="Reach out directly or fill the form.">
-              Get in Touch
-            </SectionTitle>
-            <div className="flex flex-col gap-6 mt-8">
-              <div>
-                <p className="text-xs text-muted uppercase tracking-widest mb-1">Email</p>
-                <a href="mailto:contact@vajrx.com" className="text-white hover:text-accent transition-colors duration-200 font-medium">
-                  contact@vajrx.com
-                </a>
-              </div>
-              <div>
-                <p className="text-xs text-muted uppercase tracking-widest mb-1">Phone</p>
-                <a href="tel:+916266995073" className="text-white hover:text-accent transition-colors duration-200 font-medium">
-                  +91 6266995073
-                </a>
-              </div>
-              <div>
-                <p className="text-xs text-muted uppercase tracking-widest mb-1">Website</p>
-                <span className="text-white font-medium">vajrx.com</span>
-              </div>
-              <div className="mt-4 p-6 bg-surface border border-border rounded-sm">
-                <p className="text-muted text-sm leading-relaxed">
-                  We typically respond within 24–48 hours. For project inquiries, consider using the{" "}
-                  <a href="/submit-idea" className="text-accent hover:underline">Submit an Idea</a>{" "}
-                  form for a more structured conversation.
-                </p>
-              </div>
-            </div>
+      <div className="pt-14">
+        {/* Header */}
+        <section className="relative py-24 px-6 border-b border-border overflow-hidden">
+          <div className="absolute inset-0 tech-grid opacity-100" />
+          <div className="relative max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="font-mono text-xs text-accent tracking-[0.3em] uppercase mb-5">Contact</p>
+              <h1 className="font-display font-bold text-4xl md:text-5xl text-white leading-tight mb-6">
+                Get in Touch
+              </h1>
+              <p className="text-muted text-lg leading-relaxed max-w-xl">
+                Reach out directly or use the form below. We respond to all messages within 24–48 hours.
+              </p>
+            </motion.div>
           </div>
-          {/* Right */}
-          <div>
-            <ContactForm />
+        </section>
+
+        <section className="py-16 px-6 bg-background">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+            {/* Contact info */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="lg:col-span-4"
+            >
+              <div className="flex flex-col gap-8">
+                <div className="border border-border bg-surface">
+                  <div className="px-5 py-3 border-b border-border">
+                    <p className="font-mono text-xs text-muted tracking-widest uppercase">Direct Contact</p>
+                  </div>
+                  <div className="flex flex-col divide-y divide-border">
+                    <div className="px-5 py-4">
+                      <p className="font-mono text-xs text-muted uppercase tracking-widest mb-2">Email</p>
+                      <a
+                        href="mailto:contact@vajrx.com"
+                        className="text-sm text-white hover:text-accent transition-colors duration-200 font-medium"
+                      >
+                        contact@vajrx.com
+                      </a>
+                    </div>
+                    <div className="px-5 py-4">
+                      <p className="font-mono text-xs text-muted uppercase tracking-widest mb-2">Phone</p>
+                      <a
+                        href="tel:+916266995073"
+                        className="font-mono text-sm text-white hover:text-accent transition-colors duration-200"
+                      >
+                        +91 6266995073
+                      </a>
+                    </div>
+                    <div className="px-5 py-4">
+                      <p className="font-mono text-xs text-muted uppercase tracking-widest mb-2">Web</p>
+                      <span className="text-sm text-muted">vajrx.com</span>
+                    </div>
+                    <div className="px-5 py-4">
+                      <p className="font-mono text-xs text-muted uppercase tracking-widest mb-2">Location</p>
+                      <span className="text-sm text-muted">Jabalpur, MP, India</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="border border-border/50 bg-surface/30 p-5">
+                  <p className="font-mono text-xs text-accent/70 uppercase tracking-widest mb-3">Note</p>
+                  <p className="text-muted text-sm leading-relaxed">
+                    For project inquiries, using the{" "}
+                    <a href="/submit-idea" className="text-accent hover:underline">Submit an Idea</a>{" "}
+                    form gives us the structured information needed to assess your project quickly.
+                  </p>
+                </div>
+
+                <div className="border border-border/50 bg-surface/30 p-5">
+                  <p className="font-mono text-xs text-muted/60 leading-relaxed text-sm">
+                    VajrX is an active development-stage startup. Response times may vary, but all genuine enquiries receive a reply.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Form */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="lg:col-span-8"
+            >
+              <p className="font-mono text-xs text-muted tracking-widest uppercase mb-6">Send a Message</p>
+              <ContactForm />
+            </motion.div>
           </div>
-        </div>
+        </section>
       </div>
     </PageLayout>
   );

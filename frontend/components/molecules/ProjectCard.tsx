@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import AnimatedCard from "./AnimatedCard";
 import Badge from "@/components/atoms/Badge";
 import StatusBadge from "@/components/atoms/StatusBadge";
 import type { Project } from "@/data/projects";
@@ -11,44 +10,76 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <AnimatedCard className="h-full">
-      <Link href={`/projects/${project.slug}`} className="block h-full">
-        <div className="h-full bg-surface border border-border hover:border-accent/40 rounded-sm p-6 flex flex-col gap-4 transition-colors duration-200">
+    <Link href={`/projects/${project.slug}`} className="group block h-full">
+      <div className="h-full bg-surface border border-border group-hover:border-accent/40 transition-all duration-300 flex flex-col overflow-hidden relative">
+        {/* Top accent line */}
+        <div className="h-px w-0 group-hover:w-full bg-accent/50 transition-all duration-500" />
+
+        <div className="p-7 flex flex-col gap-4 flex-1">
+          {/* Badges */}
           <div className="flex flex-wrap gap-2">
             {project.domains.map((d) => (
               <Badge key={d} domain={d} />
             ))}
             <StatusBadge status={project.status} />
           </div>
-          <h3 className="text-lg font-bold text-white leading-snug">
+
+          {/* Title */}
+          <h3 className="font-display font-bold text-lg text-white leading-snug group-hover:text-accent transition-colors duration-300">
             {project.title}
           </h3>
+
+          {/* Description */}
           <p className="text-muted text-sm leading-relaxed flex-1">
             {project.shortDescription}
           </p>
+
+          {/* Hover-reveal: highlights */}
+          {project.highlights && (
+            <div className="overflow-hidden max-h-0 group-hover:max-h-56 transition-all duration-500 ease-in-out">
+              <div className="border-t border-border/60 pt-4 flex flex-col gap-2.5">
+                <p className="font-mono text-xs text-muted tracking-[0.2em] uppercase mb-1">Key Highlights</p>
+                <ul className="flex flex-col gap-2">
+                  {project.highlights.slice(0, 3).map((h) => (
+                    <li key={h} className="flex items-start gap-2.5 text-xs text-slate-400 leading-snug">
+                      <span className="mt-1.5 w-2 h-px bg-accent/50 shrink-0 inline-block" />
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          )}
+
+          {/* Tech stack */}
           {project.techStack && (
-            <div className="flex flex-wrap gap-1.5 mt-auto pt-4 border-t border-border">
-              {project.techStack.slice(0, 3).map((tech) => (
+            <div className="flex flex-wrap gap-1.5 pt-4 border-t border-border/60 mt-auto">
+              {project.techStack.slice(0, 4).map((tech) => (
                 <span
                   key={tech}
-                  className="text-xs text-slate-400 bg-navy px-2 py-0.5 rounded-sm border border-border"
+                  className="font-mono text-xs text-muted bg-navy px-2 py-0.5 border border-border group-hover:border-border/80 transition-colors duration-200"
                 >
                   {tech}
                 </span>
               ))}
-              {project.techStack.length > 3 && (
-                <span className="text-xs text-muted">
-                  +{project.techStack.length - 3} more
+              {project.techStack.length > 4 && (
+                <span className="font-mono text-xs text-muted/60">
+                  +{project.techStack.length - 4} more
                 </span>
               )}
             </div>
           )}
-          <div className="flex items-center gap-1 text-accent text-sm font-medium mt-2">
-            View Project
-            <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
-          </div>
         </div>
-      </Link>
-    </AnimatedCard>
+
+        {/* Footer CTA */}
+        <div className="px-7 py-4 border-t border-border/60 flex items-center justify-between">
+          <span className="text-xs text-muted font-mono">{project.institution ?? "VajrX Project"}</span>
+          <span className="flex items-center gap-1.5 text-sm text-accent font-medium opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+            View details
+            <span className="transition-transform duration-200 group-hover:translate-x-1">&#8594;</span>
+          </span>
+        </div>
+      </div>
+    </Link>
   );
 }
