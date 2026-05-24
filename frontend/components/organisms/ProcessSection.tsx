@@ -56,7 +56,7 @@ export default function ProcessSection() {
           </div>
 
           <div className="lg:col-span-8">
-            <div className="flex flex-col gap-0 border border-border divide-y divide-border shadow-sm bg-surface">
+            <div className="flex flex-col gap-0 border border-white/10 divide-y divide-white/10 shadow-sm glass-card">
               {steps.map((step, i) => (
                 <motion.div
                   key={step.number}
@@ -64,12 +64,12 @@ export default function ProcessSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.45 }}
-                  className="group p-8 hover:bg-surface-raised transition-all duration-300 relative overflow-hidden"
+                  className="group p-8 hover:bg-white/5 transition-all duration-300 relative overflow-hidden"
                 >
                   <div className="absolute left-0 top-0 bottom-0 w-px bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="grid grid-cols-12 gap-6 items-start">
                     <div className="col-span-2">
-                      <span className="font-display font-bold text-6xl text-border group-hover:text-accent/30 transition-colors duration-300 tabular-nums">
+                      <span className="font-display font-bold text-6xl text-white/10 group-hover:text-accent/30 transition-colors duration-300 tabular-nums">
                         {step.number}
                       </span>
                     </div>

@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function FeaturedProjects() {
   return (
-    <section className="py-28 px-6 bg-navy/40">
+    <section className="py-28 px-6 bg-[#050912]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
@@ -51,10 +51,10 @@ export default function FeaturedProjects() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="mt-12 flex items-center gap-4 border-t border-border pt-8"
+          className="mt-12 flex items-center gap-4 border-t border-white/10 pt-8"
         >
           <span className="font-mono text-xs text-muted/50">More projects in development.</span>
-          <div className="h-px flex-1 bg-border max-w-[120px]" />
+          <div className="h-px flex-1 bg-white/10 max-w-[120px]" />
           <Link href="/submit-idea" className="font-mono text-xs text-accent/70 hover:text-accent transition-colors duration-200">
             Have an idea? Submit it &#8594;
           </Link>

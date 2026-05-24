@@ -1,6 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const EarthGlobe = dynamic(() => import("./EarthGlobe"), { ssr: false });
 
 const stats = [
   { value: "03", label: "Engineering domains" },
@@ -12,9 +15,22 @@ const stats = [
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
-      <div className="absolute inset-0 tech-grid opacity-100" />
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      {/* Earth Globe background */}
+      <div className="absolute inset-0 z-0">
+        <EarthGlobe />
+      </div>
+
+      {/* Radial vignette overlay */}
+      <div className="absolute inset-0 z-[1]" style={{
+        background: "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,10,0.6) 70%, rgba(0,0,10,0.95) 100%)"
+      }} />
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 z-[1]" style={{
+        background: "linear-gradient(to bottom, transparent, #00000a)"
+      }} />
+
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent z-[2]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -38,9 +54,9 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-              className="font-display font-bold text-foreground leading-[0.95] tracking-tight mb-6"
+              className="font-display font-bold leading-[0.95] tracking-tight mb-6"
             >
-              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">Forged for</span>
+              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hero-gradient-text">Forged for</span>
               <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-accent">the Frontier.</span>
             </motion.h1>
 
@@ -70,14 +86,14 @@ export default function HeroSection() {
             >
               <Link
                 href="/projects"
-                className="group inline-flex items-center justify-center gap-3 px-8 py-3.5 bg-accent hover:bg-accent-hover text-white text-sm font-semibold tracking-wide transition-colors duration-200"
+                className="group inline-flex items-center justify-center gap-3 px-8 py-3.5 bg-accent hover:bg-accent-hover text-black text-sm font-semibold tracking-wide transition-colors duration-200"
               >
                 Explore Projects
                 <span className="transition-transform duration-200 group-hover:translate-x-1">&#8594;</span>
               </Link>
               <Link
                 href="/submit-idea"
-                className="inline-flex items-center justify-center px-8 py-3.5 border border-border hover:border-accent/50 text-muted hover:text-foreground text-sm font-medium tracking-wide transition-all duration-200"
+                className="inline-flex items-center justify-center px-8 py-3.5 border border-white/20 hover:border-accent/60 text-muted hover:text-foreground text-sm font-medium tracking-wide transition-all duration-200 backdrop-blur-sm"
               >
                 Submit an Idea
               </Link>
@@ -91,19 +107,19 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="lg:col-span-5 hidden lg:block"
           >
-            <div className="border border-border bg-surface shadow-md">
-              <div className="px-6 py-4 border-b border-border flex items-center justify-between bg-surface-raised">
+            <div className="glass-card shadow-md">
+              <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between">
                 <span className="font-mono text-xs text-muted tracking-widest uppercase">System Metrics</span>
                 <span className="font-mono text-xs text-accent/60">v1.0</span>
               </div>
-              <div className="grid grid-cols-2 divide-x divide-y divide-border">
+              <div className="grid grid-cols-2 divide-x divide-y divide-white/10">
                 {stats.map((stat, i) => (
                   <motion.div
                     key={stat.label}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6 + i * 0.1 }}
-                    className="p-6 group hover:bg-surface-raised transition-colors duration-200"
+                    className="p-6 group hover:bg-white/5 transition-colors duration-200"
                   >
                     <div className="font-display font-bold text-5xl text-foreground tabular-nums mb-1.5 group-hover:text-accent transition-colors duration-200">
                       {stat.value}
@@ -112,7 +128,7 @@ export default function HeroSection() {
                   </motion.div>
                 ))}
               </div>
-              <div className="px-6 py-3 border-t border-border bg-surface-raised">
+              <div className="px-6 py-3 border-t border-white/10">
                 <p className="font-mono text-xs text-muted/60">Jabalpur, India &middot; ISRO Affiliated</p>
               </div>
             </div>
@@ -124,7 +140,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.6 }}
-          className="lg:hidden mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-border pt-12"
+          className="lg:hidden mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/10 pt-12"
         >
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col gap-1">
@@ -139,7 +155,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
       >
         <span className="font-mono text-xs text-muted/40 tracking-widest uppercase">Scroll</span>
         <motion.div

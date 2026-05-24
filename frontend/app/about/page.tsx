@@ -54,7 +54,7 @@ export default function AboutPage() {
   return (
     <PageLayout>
       <div className="pt-14">
-        <section className="relative py-28 px-6 border-b border-border overflow-hidden">
+        <section className="relative py-28 px-6 border-b border-white/10 overflow-hidden">
           <div className="absolute inset-0 tech-grid opacity-100" />
           <div className="relative max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
@@ -73,9 +73,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-24 px-6 bg-navy/30">
+        <section className="py-24 px-6 bg-[#050912]">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-border divide-y md:divide-y-0 md:divide-x divide-border shadow-sm bg-surface">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-white/10 divide-y md:divide-y-0 md:divide-x divide-white/10 shadow-sm glass-card">
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +117,7 @@ export default function AboutPage() {
             <SectionTitle label="Principles" subtitle="The values that define how we work and what we build.">
               Engineering Philosophy
             </SectionTitle>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-border divide-x divide-y divide-border shadow-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-white/10 divide-x divide-y divide-white/10 shadow-sm">
               {values.map((v, i) => (
                 <motion.div
                   key={v.title}
@@ -125,12 +125,12 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08, duration: 0.4 }}
-                  className="group p-8 bg-surface hover:bg-surface-raised transition-colors duration-300 relative overflow-hidden"
+                  className="group p-8 glass-card hover:bg-white/5 transition-colors duration-300 relative overflow-hidden"
                 >
                   <div className="absolute left-0 top-0 bottom-0 w-px bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="flex items-center gap-3 mb-3">
                     <span className="font-mono text-xs text-accent/50 tabular-nums">0{i + 1}</span>
-                    <div className="h-px flex-1 bg-border" />
+                    <div className="h-px flex-1 bg-white/10" />
                   </div>
                   <h3 className="font-display font-bold text-xl text-foreground mb-3 group-hover:text-accent transition-colors duration-300">
                     {v.title}
@@ -144,13 +144,13 @@ export default function AboutPage() {
 
         <TeamSection />
 
-        <section className="py-24 px-6 bg-navy/30 border-t border-border">
+        <section className="py-24 px-6 bg-[#050912] border-t border-white/10">
           <div className="max-w-7xl mx-auto">
             <SectionTitle label="Future Roadmap" subtitle="Planned milestones and active development tracks.">
               Where We Are Headed
             </SectionTitle>
 
-            <div className="flex flex-col gap-0 border border-border divide-y divide-border shadow-sm bg-surface">
+            <div className="flex flex-col gap-0 border border-white/10 divide-y divide-white/10 shadow-sm glass-card">
               {roadmapItems.map((item, i) => (
                 <motion.div
                   key={item.title}
@@ -158,7 +158,7 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.45 }}
-                  className="group p-8 hover:bg-surface-raised transition-all duration-300 relative overflow-hidden"
+                  className="group p-8 hover:bg-white/5 transition-all duration-300 relative overflow-hidden"
                 >
                   <div className="absolute left-0 top-0 bottom-0 w-px bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 items-start">
@@ -166,10 +166,10 @@ export default function AboutPage() {
                       <p className="font-mono text-xs text-accent/60 mb-2">{item.timeline}</p>
                       <span className={`inline-block font-mono text-xs px-2 py-0.5 tracking-widest uppercase ${
                         item.status === "In Progress"
-                          ? "bg-amber-50 text-amber-700 border border-amber-200"
+                          ? "bg-amber-500/10 text-amber-400 border border-amber-500/30"
                           : item.status === "Planned"
-                          ? "bg-blue-50 text-blue-700 border border-blue-200"
-                          : "bg-surface-raised text-muted border border-border"
+                          ? "bg-blue-500/10 text-blue-400 border border-blue-500/30"
+                          : "bg-white/5 text-muted border border-white/10"
                       }`}>
                         {item.status}
                       </span>

@@ -17,10 +17,10 @@ const domainConfig: Record<ProjectDomain, {
   icon: React.ReactNode;
 }> = {
   Electronics: {
-    border: "border-blue-200",
-    hoverBorder: "group-hover:border-blue-400",
-    topLine: "bg-blue-500",
-    accent: "text-blue-600",
+    border: "border-blue-500/20",
+    hoverBorder: "group-hover:border-blue-400/60",
+    topLine: "bg-blue-400",
+    accent: "text-blue-400",
     label: "EL",
     icon: (
       <svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -33,10 +33,10 @@ const domainConfig: Record<ProjectDomain, {
     ),
   },
   Defence: {
-    border: "border-green-200",
-    hoverBorder: "group-hover:border-green-500",
-    topLine: "bg-green-600",
-    accent: "text-green-700",
+    border: "border-green-500/20",
+    hoverBorder: "group-hover:border-green-400/60",
+    topLine: "bg-green-400",
+    accent: "text-green-400",
     label: "DF",
     icon: (
       <svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -50,10 +50,10 @@ const domainConfig: Record<ProjectDomain, {
     ),
   },
   Medical: {
-    border: "border-red-200",
-    hoverBorder: "group-hover:border-red-400",
-    topLine: "bg-red-500",
-    accent: "text-red-600",
+    border: "border-red-500/20",
+    hoverBorder: "group-hover:border-red-400/60",
+    topLine: "bg-red-400",
+    accent: "text-red-400",
     label: "MD",
     icon: (
       <svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -67,12 +67,12 @@ export default function DomainCard({ domain, description, capabilities }: Domain
   const config = domainConfig[domain];
 
   return (
-    <div className={`group relative h-full bg-surface border ${config.border} ${config.hoverBorder} transition-all duration-350 overflow-hidden shadow-sm hover:shadow-md`}>
+    <div className={`group relative h-full glass-card border ${config.border} ${config.hoverBorder} transition-all duration-350 overflow-hidden hover:shadow-lg hover:shadow-accent/5`}>
       <div className={`h-px w-0 group-hover:w-full transition-all duration-500 ease-out ${config.topLine}`} />
 
       <div className="p-8 flex flex-col gap-5">
         <div className="flex items-start justify-between">
-          <div className={`${config.accent} opacity-80 group-hover:opacity-100 transition-opacity duration-300`}>
+          <div className={`${config.accent} opacity-70 group-hover:opacity-100 transition-opacity duration-300`}>
             {config.icon}
           </div>
           <span className={`font-mono text-xs ${config.accent} opacity-30 group-hover:opacity-50 transition-opacity duration-300 tracking-widest`}>
@@ -86,7 +86,7 @@ export default function DomainCard({ domain, description, capabilities }: Domain
         </div>
 
         <div className="overflow-hidden max-h-0 group-hover:max-h-80 transition-all duration-500 ease-in-out">
-          <div className="border-t border-border pt-5 flex flex-col gap-3">
+          <div className="border-t border-white/10 pt-5 flex flex-col gap-3">
             <p className="font-mono text-xs text-muted tracking-[0.2em] uppercase">Capabilities</p>
             <ul className="flex flex-col gap-2.5">
               {capabilities.map((cap) => (

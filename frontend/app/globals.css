@@ -15,16 +15,16 @@ html {
 }
 
 body {
-  background-color: #F5F7FA;
-  color: #0D1117;
+  background-color: #00000a;
+  color: #ffffff;
   font-family: 'IBM Plex Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background-color: #2563EB;
-  color: #ffffff;
+  background-color: #00aaff;
+  color: #000000;
 }
 
 ::-webkit-scrollbar {
@@ -32,16 +32,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F5F7FA;
+  background: #00000a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: rgba(0, 170, 255, 0.3);
   border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563EB;
+  background: #00aaff;
 }
 
 .font-display {
@@ -50,9 +50,23 @@ body {
 
 .tech-grid {
   background-image:
-    linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+    linear-gradient(rgba(0, 170, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 170, 255, 0.04) 1px, transparent 1px);
   background-size: 80px 80px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero-gradient-text {
+  background: linear-gradient(90deg, #e0e0e0, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .tabular-nums {

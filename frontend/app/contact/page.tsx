@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <PageLayout>
       <div className="pt-14">
-        <section className="relative py-24 px-6 border-b border-border overflow-hidden">
+        <section className="relative py-24 px-6 border-b border-white/10 overflow-hidden">
           <div className="absolute inset-0 tech-grid opacity-100" />
           <div className="relative max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
@@ -31,8 +31,8 @@ export default function ContactPage() {
               className="lg:col-span-4"
             >
               <div className="flex flex-col gap-6">
-                <div className="border border-border bg-surface shadow-sm">
-                  <div className="px-5 py-3 border-b border-border bg-surface-raised">
+                <div className="border border-white/10 glass-cardshadow-sm">
+                  <div className="px-5 py-3 border-b border-white/10 bg-white/5">
                     <p className="font-mono text-xs text-muted tracking-widest uppercase">Direct Contact</p>
                   </div>
                   <div className="flex flex-col divide-y divide-border">
@@ -64,7 +64,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="border border-border/50 bg-surface p-5 shadow-sm">
+                <div className="border border-white/10/50 glass-cardp-5 shadow-sm">
                   <p className="font-mono text-xs text-accent/70 uppercase tracking-widest mb-3">Note</p>
                   <p className="text-muted text-sm leading-relaxed">
                     For project inquiries, using the{" "}

@@ -10,9 +10,9 @@ const metrics = [
 
 export default function StatsSection() {
   return (
-    <section className="border-y border-border bg-surface shadow-sm">
+    <section className="border-y border-white/10 bg-[#050912]">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-border">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/10">
           {metrics.map((m, i) => (
             <motion.div
               key={m.unit}
@@ -20,7 +20,7 @@ export default function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.4 }}
-              className="group px-8 py-8 flex flex-col gap-1.5 hover:bg-surface-raised transition-colors duration-300"
+              className="group px-8 py-8 flex flex-col gap-1.5 hover:bg-white/5 transition-colors duration-300"
             >
               <div className="flex items-baseline gap-2">
                 <span className="font-display font-bold text-5xl text-foreground tabular-nums group-hover:text-accent transition-colors duration-300">

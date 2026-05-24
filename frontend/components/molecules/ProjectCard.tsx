@@ -11,7 +11,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link href={`/projects/${project.slug}`} className="group block h-full">
-      <div className="h-full bg-surface border border-border group-hover:border-accent/50 transition-all duration-300 flex flex-col overflow-hidden shadow-sm group-hover:shadow-md">
+      <div className="h-full glass-card border border-white/10 group-hover:border-accent/50 transition-all duration-300 flex flex-col overflow-hidden group-hover:shadow-lg group-hover:shadow-accent/5">
         <div className="h-px w-0 group-hover:w-full bg-accent transition-all duration-500" />
 
         <div className="p-7 flex flex-col gap-4 flex-1">
@@ -28,7 +28,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
           {project.highlights && (
             <div className="overflow-hidden max-h-0 group-hover:max-h-56 transition-all duration-500 ease-in-out">
-              <div className="border-t border-border pt-4 flex flex-col gap-2.5">
+              <div className="border-t border-white/10 pt-4 flex flex-col gap-2.5">
                 <p className="font-mono text-xs text-muted tracking-[0.2em] uppercase mb-1">Key Highlights</p>
                 <ul className="flex flex-col gap-2">
                   {project.highlights.slice(0, 3).map((h) => (
@@ -45,7 +45,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.techStack && (
             <div className="flex flex-wrap gap-1.5 pt-4 border-t border-border mt-auto">
               {project.techStack.slice(0, 4).map((tech) => (
-                <span key={tech} className="font-mono text-xs text-muted bg-surface-raised px-2 py-0.5 border border-border">
+                <span key={tech} className="font-mono text-xs text-muted bg-white/5 px-2 py-0.5 border border-white/10">
                   {tech}
                 </span>
               ))}
@@ -56,7 +56,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           )}
         </div>
 
-        <div className="px-7 py-4 border-t border-border bg-surface-raised flex items-center justify-between">
+        <div className="px-7 py-4 border-t border-white/10 bg-white/5 flex items-center justify-between">
           <span className="text-xs text-muted font-mono">{project.institution ?? "VajrX Technology"}</span>
           <span className="flex items-center gap-1.5 text-sm text-accent font-medium opacity-60 group-hover:opacity-100 transition-opacity duration-300">
             View details <span className="transition-transform duration-200 group-hover:translate-x-1">&#8594;</span>

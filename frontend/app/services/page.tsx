@@ -7,7 +7,7 @@ const services = [
   {
     domain: "Electronics",
     code: "EL",
-    border: "border-blue-200 hover:border-blue-400",
+    border: "border-blue-500/20 hover:border-blue-400/60",
     accent: "text-blue-600",
     description: "Custom hardware and firmware development for embedded systems, IoT platforms, and signal processing applications. We design from PCB-level up through cloud-connected deployment.",
     items: [
@@ -22,7 +22,7 @@ const services = [
   {
     domain: "Defence",
     code: "DF",
-    border: "border-green-200 hover:border-green-500",
+    border: "border-green-500/20 hover:border-green-400/60",
     accent: "text-green-700",
     description: "Indigenous alternatives to imported defence and dual-use systems. From detection networks to navigation solutions — designed for operational resilience and national strategic value.",
     items: [
@@ -37,7 +37,7 @@ const services = [
   {
     domain: "Medical",
     code: "MD",
-    border: "border-red-200 hover:border-red-400",
+    border: "border-red-500/20 hover:border-red-400/60",
     accent: "text-red-600",
     description: "AI-powered clinical tools and medical device prototypes that reduce human error in critical healthcare settings. Built to clinical standards with deployment in real workflows.",
     items: [
@@ -62,7 +62,7 @@ export default function ServicesPage() {
   return (
     <PageLayout>
       <div className="pt-14">
-        <section className="relative py-28 px-6 border-b border-border overflow-hidden">
+        <section className="relative py-28 px-6 border-b border-white/10 overflow-hidden">
           <div className="absolute inset-0 tech-grid opacity-100" />
           <div className="relative max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
@@ -85,7 +85,7 @@ export default function ServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.45 }}
-                  className={`group border ${s.border} bg-surface transition-all duration-300 shadow-sm hover:shadow-md`}
+                  className={`group border ${s.border} glass-cardtransition-all duration-300 shadow-sm hover:shadow-md`}
                 >
                   <div className="p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
                     <div className="lg:col-span-4">
@@ -96,7 +96,7 @@ export default function ServicesPage() {
                       <p className="text-muted text-sm leading-relaxed">{s.description}</p>
                     </div>
                     <div className="lg:col-span-8">
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border border-border divide-x divide-y divide-border">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border border-white/10 divide-x divide-y divide-border">
                         {s.items.map((item) => (
                           <div key={item.title} className="group/item p-4 hover:bg-surface-raised transition-colors duration-200">
                             <h4 className="text-sm font-semibold text-foreground mb-1 group-hover/item:text-accent transition-colors duration-200">
@@ -114,7 +114,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-24 px-6 bg-navy/30 border-y border-border">
+        <section className="py-24 px-6 bg-[#050912] border-y border-white/10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               <div className="lg:col-span-4">
@@ -131,7 +131,7 @@ export default function ServicesPage() {
                 </motion.div>
               </div>
               <div className="lg:col-span-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border border-border divide-x divide-y divide-border shadow-sm">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 border border-white/10 divide-x divide-y divide-border shadow-sm">
                   {engagementTypes.map((e, i) => (
                     <motion.div
                       key={e.type}
@@ -139,7 +139,7 @@ export default function ServicesPage() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.08 }}
-                      className="group p-6 bg-surface hover:bg-surface-raised transition-colors duration-300"
+                      className="group p-6 glass-card hover:bg-white/5 transition-colors duration-300"
                     >
                       <h3 className="font-display font-bold text-base text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
                         {e.type}
@@ -160,7 +160,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="border border-accent/20 bg-surface relative overflow-hidden p-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center shadow-md"
+              className="border border-accent/20 glass-cardrelative overflow-hidden p-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center shadow-md"
             >
               <div className="absolute top-0 left-0 w-6 h-6 border-l border-t border-accent/40" />
               <div className="absolute bottom-0 right-0 w-6 h-6 border-r border-b border-accent/40" />
@@ -175,7 +175,7 @@ export default function ServicesPage() {
                   Submit Your Idea
                   <span className="transition-transform duration-200 group-hover:translate-x-1">&#8594;</span>
                 </Link>
-                <Link href="/contact" className="group inline-flex items-center justify-between px-6 py-4 border border-border hover:border-accent/50 text-muted hover:text-foreground text-sm font-medium tracking-wide transition-all duration-200">
+                <Link href="/contact" className="group inline-flex items-center justify-between px-6 py-4 border border-white/10 hover:border-accent/50 text-muted hover:text-foreground text-sm font-medium tracking-wide transition-all duration-200">
                   Contact Us Directly
                   <span className="transition-transform duration-200 group-hover:translate-x-1">&#8594;</span>
                 </Link>

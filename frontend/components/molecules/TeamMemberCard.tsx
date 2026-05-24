@@ -11,10 +11,10 @@ interface TeamMemberCardProps {
 
 export default function TeamMemberCard({ name, title, bio, imageSrc, featured = false }: TeamMemberCardProps) {
   return (
-    <div className={`group h-full bg-surface border ${featured ? "border-accent/50" : "border-border"} hover:border-accent/40 transition-all duration-300 overflow-hidden flex flex-col shadow-sm hover:shadow-md`}>
+    <div className={`group h-full glass-card border ${featured ? "border-accent/50" : "border-white/10"} hover:border-accent/40 transition-all duration-300 overflow-hidden flex flex-col hover:shadow-lg hover:shadow-accent/5`}>
       {featured && <div className="h-px bg-accent" />}
 
-      <div className="relative w-full aspect-square bg-navy overflow-hidden">
+      <div className="relative w-full aspect-square bg-[#0a0f1a] overflow-hidden">
         <Image
           src={imageSrc}
           alt={name}

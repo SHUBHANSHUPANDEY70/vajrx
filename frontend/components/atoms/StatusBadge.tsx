@@ -8,12 +8,12 @@ interface StatusBadgeProps {
 
 const statusConfig: Record<ProjectStatus, { color: string; dot: string }> = {
   Completed: {
-    color: "bg-green-50 text-green-700 border border-green-200",
-    dot: "bg-green-500",
+    color: "bg-green-500/10 text-green-400 border border-green-500/30",
+    dot: "bg-green-400",
   },
   "In Progress": {
-    color: "bg-amber-50 text-amber-700 border border-amber-200",
-    dot: "bg-amber-500 animate-pulse",
+    color: "bg-amber-500/10 text-amber-400 border border-amber-500/30",
+    dot: "bg-amber-400 animate-pulse",
   },
 };
 

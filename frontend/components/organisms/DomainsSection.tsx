@@ -47,7 +47,7 @@ const domains = [
 
 export default function DomainsSection() {
   return (
-    <section className="py-28 px-6 bg-navy/20 border-y border-border/50">
+    <section className="py-28 px-6 bg-background border-y border-white/10">
       <div className="max-w-7xl mx-auto">
         <SectionTitle
           label="Engineering Domains"
@@ -58,7 +58,7 @@ export default function DomainsSection() {
         <p className="text-muted text-sm mb-10 max-w-xl -mt-8 leading-relaxed">
           Hover any domain to explore the full capability set. Each vertical is a self-contained engineering discipline with dedicated expertise and tooling.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-border/50">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10">
           {domains.map((d, i) => (
             <motion.div
               key={d.domain}
@@ -66,7 +66,7 @@ export default function DomainsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.12, duration: 0.45 }}
-              className={`${i < domains.length - 1 ? "md:border-r border-border/50" : ""} border-b md:border-b-0 border-border/50 last:border-b-0`}
+              className={`${i < domains.length - 1 ? "md:border-r border-white/10" : ""} border-b md:border-b-0 border-white/10 last:border-b-0`}
             >
               <DomainCard
                 domain={d.domain}

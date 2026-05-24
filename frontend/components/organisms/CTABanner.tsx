@@ -4,14 +4,14 @@ import Link from "next/link";
 
 export default function CTABanner() {
   return (
-    <section className="py-24 px-6 bg-navy/30 border-t border-border">
+    <section className="py-24 px-6 bg-[#050912] border-t border-white/10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="border border-accent/20 bg-surface relative overflow-hidden shadow-md"
+          className="border border-accent/20 glass-card relative overflow-hidden shadow-md"
         >
           <div className="absolute top-0 left-0 w-8 h-8 border-l border-t border-accent/40" />
           <div className="absolute top-0 right-0 w-8 h-8 border-r border-t border-accent/40" />
@@ -42,7 +42,7 @@ export default function CTABanner() {
               </Link>
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-between px-6 py-4 border border-border hover:border-accent/50 text-muted hover:text-foreground text-sm font-medium tracking-wide transition-all duration-200"
+                className="group inline-flex items-center justify-between px-6 py-4 border border-white/20 hover:border-accent/50 text-muted hover:text-foreground text-sm font-medium tracking-wide transition-all duration-200"
               >
                 Get in Touch
                 <span className="transition-transform duration-200 group-hover:translate-x-1">&#8594;</span>

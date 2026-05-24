@@ -7,9 +7,9 @@ interface BadgeProps {
 }
 
 const domainColors: Record<ProjectDomain, string> = {
-  Electronics: "bg-blue-50 text-blue-700 border border-blue-200",
-  Defence: "bg-green-50 text-green-800 border border-green-200",
-  Medical: "bg-red-50 text-red-700 border border-red-200",
+  Electronics: "bg-blue-500/10 text-blue-400 border border-blue-500/30",
+  Defence: "bg-green-500/10 text-green-400 border border-green-500/30",
+  Medical: "bg-red-500/10 text-red-400 border border-red-500/30",
 };
 
 export default function Badge({ domain, className = "" }: BadgeProps) {
