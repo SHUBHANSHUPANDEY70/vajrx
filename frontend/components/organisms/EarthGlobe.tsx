@@ -12,7 +12,7 @@ export default function EarthGlobe() {
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setClearColor(0x000000, 0);
+    renderer.setClearColor(0x00000a, 1);
     const canvas = renderer.domElement;
     canvas.style.position = "fixed";
     canvas.style.top = "0";

@@ -23,17 +23,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        {/* Mounts the Earth canvas directly to body via useEffect */}
+        {/* Earth canvas — fixed, covers full viewport, paints space+stars+globe */}
         <EarthGlobe />
-        {/* Dark vignette so page content is readable over the globe */}
-        <div
-          className="fixed inset-0 pointer-events-none"
-          style={{ zIndex: 1, background: "radial-gradient(ellipse at center, rgba(0,0,10,0.15) 0%, rgba(0,0,10,0.5) 65%, rgba(0,0,10,0.88) 100%)" }}
-        />
-        {/* Meteor streaks on top of everything */}
+        {/* Meteor streaks */}
         <SpaceCanvas />
-        {/* Page content */}
-        <div className="relative" style={{ zIndex: 3 }}>
+        {/* Page content — no z-index so sections are transparent over the globe */}
+        <div className="relative">
           {children}
         </div>
       </body>
