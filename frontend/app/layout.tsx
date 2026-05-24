@@ -27,8 +27,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <EarthGlobe />
         {/* Meteor streaks */}
         <SpaceCanvas />
-        {/* Page content — no z-index so sections are transparent over the globe */}
-        <div className="relative">
+        {/* Page content at z-index:2 — transparent sections composite against Earth below */}
+        <div className="relative" style={{ zIndex: 2 }}>
           {children}
         </div>
       </body>

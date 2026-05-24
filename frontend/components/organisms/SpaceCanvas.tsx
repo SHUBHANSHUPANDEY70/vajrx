@@ -101,7 +101,7 @@ export default function SpaceCanvas() {
     <canvas
       ref={meteorRef}
       className="fixed inset-0 pointer-events-none"
-      style={{ zIndex: 9999 }}
+      style={{ zIndex: 3, background: "transparent" }}
     />
   );
 }

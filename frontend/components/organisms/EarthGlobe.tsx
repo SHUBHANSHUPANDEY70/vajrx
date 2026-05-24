@@ -19,7 +19,7 @@ export default function EarthGlobe() {
     canvas.style.left = "0";
     canvas.style.width = "100vw";
     canvas.style.height = "100vh";
-    canvas.style.zIndex = "0";
+    canvas.style.zIndex = "1";
     canvas.style.pointerEvents = "none";
     document.body.appendChild(canvas);
 
