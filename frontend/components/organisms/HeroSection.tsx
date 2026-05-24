@@ -40,8 +40,8 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               className="font-display font-bold text-foreground leading-[0.95] tracking-tight mb-6"
             >
-              <span className="block text-4xl sm:text-5xl md:text-7xl lg:text-[9rem] xl:text-[10rem]">Forged for</span>
-              <span className="block text-4xl sm:text-5xl md:text-7xl lg:text-[9rem] xl:text-[10rem] text-accent">the Frontier.</span>
+              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">Forged for</span>
+              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-accent">the Frontier.</span>
             </motion.h1>
 
             <motion.p
