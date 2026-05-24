@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <SpaceCanvas />
-        <div className="relative" style={{ zIndex: 1 }}>
+        <div className="relative">
           {children}
         </div>
       </body>

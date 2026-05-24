@@ -25,12 +25,12 @@ interface Planet {
 }
 
 const PLANETS: Planet[] = [
-  { x: 0.85, y: 0.18, radius: 38, color: "#1a4fcc", glowColor: "rgba(60,130,255,0.35)", orbitRadius: 18, orbitSpeed: 0.00035, orbitOffset: 0, parallaxFactor: 0.08 },
-  { x: 0.08, y: 0.45, radius: 26, color: "#c04010", glowColor: "rgba(255,100,40,0.3)", orbitRadius: 12, orbitSpeed: 0.00028, orbitOffset: 2.1, parallaxFactor: 0.12 },
-  { x: 0.78, y: 0.72, radius: 20, color: "#0aaa80", glowColor: "rgba(0,200,140,0.28)", orbitRadius: 10, orbitSpeed: 0.0005, orbitOffset: 4.2, parallaxFactor: 0.06 },
-  { x: 0.15, y: 0.82, radius: 32, color: "#7722cc", glowColor: "rgba(150,60,255,0.32)", orbitRadius: 16, orbitSpeed: 0.00022, orbitOffset: 1.3, parallaxFactor: 0.1 },
-  { x: 0.55, y: 0.10, radius: 16, color: "#cc9900", glowColor: "rgba(255,200,0,0.25)", orbitRadius: 8, orbitSpeed: 0.0006, orbitOffset: 3.5, parallaxFactor: 0.07 },
-  { x: 0.92, y: 0.55, radius: 12, color: "#cc3366", glowColor: "rgba(255,60,120,0.22)", orbitRadius: 6, orbitSpeed: 0.0008, orbitOffset: 5.1, parallaxFactor: 0.05 },
+  { x: 0.88, y: 0.16, radius: 52, color: "#1a4fcc", glowColor: "rgba(60,130,255,0.5)", orbitRadius: 22, orbitSpeed: 0.00035, orbitOffset: 0, parallaxFactor: 0.08 },
+  { x: 0.06, y: 0.42, radius: 36, color: "#c04010", glowColor: "rgba(255,100,40,0.45)", orbitRadius: 15, orbitSpeed: 0.00028, orbitOffset: 2.1, parallaxFactor: 0.12 },
+  { x: 0.80, y: 0.74, radius: 30, color: "#0aaa80", glowColor: "rgba(0,220,150,0.42)", orbitRadius: 13, orbitSpeed: 0.0005, orbitOffset: 4.2, parallaxFactor: 0.06 },
+  { x: 0.12, y: 0.80, radius: 44, color: "#7722cc", glowColor: "rgba(160,70,255,0.48)", orbitRadius: 18, orbitSpeed: 0.00022, orbitOffset: 1.3, parallaxFactor: 0.1 },
+  { x: 0.52, y: 0.08, radius: 24, color: "#cc9900", glowColor: "rgba(255,200,0,0.4)", orbitRadius: 10, orbitSpeed: 0.0006, orbitOffset: 3.5, parallaxFactor: 0.07 },
+  { x: 0.94, y: 0.58, radius: 18, color: "#cc3366", glowColor: "rgba(255,60,120,0.38)", orbitRadius: 8, orbitSpeed: 0.0008, orbitOffset: 5.1, parallaxFactor: 0.05 },
 ];
 
 export default function SpaceCanvas() {
@@ -216,7 +216,7 @@ export default function SpaceCanvas() {
       <canvas
         ref={planetRef}
         className="fixed inset-0 pointer-events-none"
-        style={{ zIndex: 0 }}
+        style={{ zIndex: 2 }}
       />
       <canvas
         ref={meteorRef}
