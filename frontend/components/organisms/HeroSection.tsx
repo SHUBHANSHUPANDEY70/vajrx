@@ -1,9 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import dynamic from "next/dynamic";
-
-const EarthGlobe = dynamic(() => import("./EarthGlobe"), { ssr: false });
 
 const stats = [
   { value: "03", label: "Engineering domains" },
@@ -14,23 +11,8 @@ const stats = [
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-background">
-      {/* Earth Globe background */}
-      <div className="absolute inset-0 z-0">
-        <EarthGlobe />
-      </div>
-
-      {/* Radial vignette overlay */}
-      <div className="absolute inset-0 z-[1]" style={{
-        background: "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,10,0.6) 70%, rgba(0,0,10,0.95) 100%)"
-      }} />
-
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 z-[1]" style={{
-        background: "linear-gradient(to bottom, transparent, #00000a)"
-      }} />
-
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent z-[2]" />
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent z-[1]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

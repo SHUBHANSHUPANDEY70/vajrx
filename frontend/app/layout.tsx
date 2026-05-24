@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import dynamic from "next/dynamic";
 
+const EarthGlobe = dynamic(() => import("@/components/organisms/EarthGlobe"), { ssr: false });
 const SpaceCanvas = dynamic(() => import("@/components/organisms/SpaceCanvas"), { ssr: false });
 
 export const metadata: Metadata = {
@@ -22,8 +23,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
+        {/* Fixed Earth globe — always in background across all pages */}
+        <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }}>
+          <EarthGlobe />
+        </div>
+        {/* Dark vignette so page content is readable over the globe */}
+        <div
+          className="fixed inset-0 pointer-events-none"
+          style={{ zIndex: 1, background: "radial-gradient(ellipse at center, rgba(0,0,10,0.45) 0%, rgba(0,0,10,0.75) 60%, rgba(0,0,10,0.96) 100%)" }}
+        />
+        {/* Meteor streaks on top of everything */}
         <SpaceCanvas />
-        <div className="relative">
+        {/* Page content */}
+        <div className="relative" style={{ zIndex: 3 }}>
           {children}
         </div>
       </body>
