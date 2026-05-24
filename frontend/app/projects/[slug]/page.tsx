@@ -27,7 +27,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               {project.domains.map((d) => <Badge key={d} domain={d} />)}
               <StatusBadge status={project.status} />
             </div>
-            <h1 className="font-display font-bold text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-foreground tracking-tight leading-tight mb-4">
+            <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-foreground tracking-tight leading-tight mb-4">
               {project.title}
             </h1>
             {project.institution && (
