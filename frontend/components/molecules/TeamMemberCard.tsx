@@ -7,9 +7,10 @@ interface TeamMemberCardProps {
   bio: string;
   imageSrc: string;
   featured?: boolean;
+  badge?: string;
 }
 
-export default function TeamMemberCard({ name, title, bio, imageSrc, featured = false }: TeamMemberCardProps) {
+export default function TeamMemberCard({ name, title, bio, imageSrc, featured = false, badge = "Founder" }: TeamMemberCardProps) {
   return (
     <div className={`group h-full glass-card border ${featured ? "border-accent/50" : "border-white/10"} hover:border-accent/40 transition-all duration-300 overflow-hidden flex flex-col hover:shadow-lg hover:shadow-accent/5`}>
       {featured && <div className="h-px bg-accent" />}
@@ -24,7 +25,7 @@ export default function TeamMemberCard({ name, title, bio, imageSrc, featured = 
         />
         {featured && (
           <div className="absolute top-3 right-3 bg-accent text-white font-mono text-xs font-medium px-2.5 py-1 tracking-widest uppercase">
-            Founder
+            {badge}
           </div>
         )}
       </div>

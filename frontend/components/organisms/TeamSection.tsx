@@ -6,7 +6,8 @@ import SectionTitle from "@/components/atoms/SectionTitle";
 const team = [
   {
     name: "Shubhanshu Pandey",
-    title: "Director",
+    title: "Founder & Director",
+    badge: "Director",
     bio: "Electrical Engineering student with a strong focus on R&D and embedded systems. Research Intern at NRSC, ISRO, working on indigenization of LDSN lightning detection devices and NavIC integration. National-level aerospace modeling recognition (ISROxIITR 2024). Driving VajrX Technology's vision of indigenous engineering across defence and electronics.",
     imageSrc: "/team/shubhanshu.svg",
     featured: true,
