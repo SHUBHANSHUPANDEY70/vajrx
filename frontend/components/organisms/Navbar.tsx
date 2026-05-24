@@ -25,7 +25,7 @@ export default function Navbar() {
 
   return (
     <header
-      style={{ zIndex: 4 }}
+      style={{ zIndex: 50 }}
       className={`fixed top-0 left-0 right-0 transition-all duration-300 ${
         scrolled
           ? "bg-black/80 backdrop-blur-md border-b border-white/10 shadow-sm"
