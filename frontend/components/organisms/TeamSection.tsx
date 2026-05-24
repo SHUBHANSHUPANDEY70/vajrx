@@ -29,7 +29,7 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-24 px-6 bg-black/60">
       <div className="max-w-7xl mx-auto">
         <SectionTitle label="Leadership" subtitle="The founders and engineers building VajrX Technology.">
           Our Team

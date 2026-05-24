@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function FeaturedProjects() {
   return (
-    <section className="py-28 px-6 bg-[#050912]">
+    <section className="py-28 px-6 bg-black/70">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>

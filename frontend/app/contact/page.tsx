@@ -22,7 +22,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-background">
+        <section className="py-16 px-6 bg-black/60">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -31,7 +31,7 @@ export default function ContactPage() {
               className="lg:col-span-4"
             >
               <div className="flex flex-col gap-6">
-                <div className="border border-white/10 glass-cardshadow-sm">
+                <div className="border border-white/10 glass-card shadow-sm">
                   <div className="px-5 py-3 border-b border-white/10 bg-white/5">
                     <p className="font-mono text-xs text-muted tracking-widest uppercase">Direct Contact</p>
                   </div>
@@ -64,7 +64,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="border border-white/10/50 glass-cardp-5 shadow-sm">
+                <div className="border border-white/10/50 glass-card p-5 shadow-sm">
                   <p className="font-mono text-xs text-accent/70 uppercase tracking-widest mb-3">Note</p>
                   <p className="text-muted text-sm leading-relaxed">
                     For project inquiries, using the{" "}

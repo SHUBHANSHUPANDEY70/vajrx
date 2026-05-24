@@ -10,7 +10,7 @@ const metrics = [
 
 export default function StatsSection() {
   return (
-    <section className="border-y border-white/10 bg-[#050912]">
+    <section className="border-y border-white/10 bg-black/70">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/10">
           {metrics.map((m, i) => (

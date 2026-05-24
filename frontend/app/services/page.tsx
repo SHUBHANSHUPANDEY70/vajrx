@@ -75,7 +75,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-24 px-6 bg-background">
+        <section className="py-24 px-6 bg-black/60">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col gap-6">
               {services.map((s, i) => (
@@ -85,7 +85,7 @@ export default function ServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.45 }}
-                  className={`group border ${s.border} glass-cardtransition-all duration-300 shadow-sm hover:shadow-md`}
+                  className={`group border ${s.border} glass-card transition-all duration-300 shadow-sm hover:shadow-md`}
                 >
                   <div className="p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
                     <div className="lg:col-span-4">
@@ -114,7 +114,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-24 px-6 bg-[#050912] border-y border-white/10">
+        <section className="py-24 px-6 bg-black/70 border-y border-white/10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               <div className="lg:col-span-4">
@@ -154,13 +154,13 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-24 px-6 bg-background">
+        <section className="py-24 px-6 bg-black/60">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="border border-accent/20 glass-cardrelative overflow-hidden p-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center shadow-md"
+              className="border border-accent/20 glass-card relative overflow-hidden p-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center shadow-md"
             >
               <div className="absolute top-0 left-0 w-6 h-6 border-l border-t border-accent/40" />
               <div className="absolute bottom-0 right-0 w-6 h-6 border-r border-b border-accent/40" />

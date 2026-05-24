@@ -73,7 +73,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-24 px-6 bg-[#050912]">
+        <section className="py-24 px-6 bg-black/70">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-white/10 divide-y md:divide-y-0 md:divide-x divide-white/10 shadow-sm glass-card">
               <motion.div
@@ -112,7 +112,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="py-24 px-6 bg-background">
+        <section className="py-24 px-6 bg-black/60">
           <div className="max-w-7xl mx-auto">
             <SectionTitle label="Principles" subtitle="The values that define how we work and what we build.">
               Engineering Philosophy
@@ -144,7 +144,7 @@ export default function AboutPage() {
 
         <TeamSection />
 
-        <section className="py-24 px-6 bg-[#050912] border-t border-white/10">
+        <section className="py-24 px-6 bg-black/70 border-t border-white/10">
           <div className="max-w-7xl mx-auto">
             <SectionTitle label="Future Roadmap" subtitle="Planned milestones and active development tracks.">
               Where We Are Headed

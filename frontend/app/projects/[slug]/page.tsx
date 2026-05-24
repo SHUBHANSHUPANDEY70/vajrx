@@ -46,7 +46,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               <p className="text-foreground/80 text-lg leading-relaxed">{project.fullDescription}</p>
             </div>
             <div className="lg:col-span-4">
-              <div className="border border-white/10 glass-cardshadow-sm">
+              <div className="border border-white/10 glass-card shadow-sm">
                 <div className="px-5 py-3 border-b border-white/10 bg-white/5">
                   <p className="font-mono text-xs text-muted tracking-widest uppercase">Project Info</p>
                 </div>
@@ -77,7 +77,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               <p className="font-mono text-xs text-accent tracking-widest uppercase mb-6">Technology Stack</p>
               <div className="flex flex-wrap gap-2">
                 {project.techStack.map((tech) => (
-                  <span key={tech} className="font-mono text-sm text-foreground/80 glass-cardborder border-white/10 px-3 py-2 hover:border-accent/40 transition-colors duration-200 shadow-sm">
+                  <span key={tech} className="font-mono text-sm text-foreground/80 glass-card border border-white/10 px-3 py-2 hover:border-accent/40 transition-colors duration-200 shadow-sm">
                     {tech}
                   </span>
                 ))}
@@ -90,7 +90,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
               <p className="font-mono text-xs text-accent tracking-widest uppercase mb-6">Key Highlights</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-white/10 divide-x divide-y divide-border shadow-sm">
                 {project.highlights.map((h, i) => (
-                  <div key={h} className="group p-5 glass-cardhover:bg-white/5 transition-colors duration-200">
+                  <div key={h} className="group p-5 glass-card hover:bg-white/5 transition-colors duration-200">
                     <div className="flex items-start gap-3">
                       <span className="font-mono text-xs text-accent/40 mt-0.5 tabular-nums shrink-0">
                         {String(i + 1).padStart(2, "0")}
@@ -106,7 +106,7 @@ export default function ProjectDetailPage({ params }: { params: { slug: string }
           {project.futureGoals && (
             <div>
               <p className="font-mono text-xs text-accent tracking-widest uppercase mb-6">Future Scope</p>
-              <div className="border border-white/10 glass-cardshadow-sm">
+              <div className="border border-white/10 glass-card shadow-sm">
                 <div className="flex flex-col divide-y divide-border">
                   {project.futureGoals.map((g, i) => (
                     <div key={g} className="group flex items-start gap-5 p-6 hover:bg-white/5 transition-colors duration-200">
