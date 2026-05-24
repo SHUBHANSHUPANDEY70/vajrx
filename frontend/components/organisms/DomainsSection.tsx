@@ -56,7 +56,7 @@ export default function DomainsSection() {
           What We Build
         </SectionTitle>
         <p className="text-muted text-sm mb-10 max-w-xl -mt-8 leading-relaxed">
-          Hover any domain to explore the full capability set. Each vertical is a self-contained engineering discipline with dedicated expertise and tooling.
+          Each vertical is a self-contained engineering discipline with dedicated expertise and tooling.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10">
           {domains.map((d, i) => (

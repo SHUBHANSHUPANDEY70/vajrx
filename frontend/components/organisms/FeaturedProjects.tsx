@@ -19,7 +19,7 @@ export default function FeaturedProjects() {
               <div className="h-px w-4 bg-accent/30" />
             </div>
             <p className="text-muted text-base max-w-lg leading-relaxed">
-              Active builds and completed systems. Hover any card to see key highlights. Each project is a step toward engineering sovereignty.
+              Active builds and completed systems. Each project is a step toward engineering sovereignty.
             </p>
           </div>
           <Link
