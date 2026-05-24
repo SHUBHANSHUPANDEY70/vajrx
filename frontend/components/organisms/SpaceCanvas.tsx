@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 interface Meteor {
   x: number;
@@ -13,12 +13,19 @@ interface Meteor {
 }
 
 export default function SpaceCanvas() {
-  const meteorRef = useRef<HTMLCanvasElement>(null);
-
   useEffect(() => {
-    const canvas = meteorRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d")!;
+    const canvas = document.createElement("canvas");
+    canvas.style.position = "fixed";
+    canvas.style.top = "0";
+    canvas.style.left = "0";
+    canvas.style.width = "100vw";
+    canvas.style.height = "100vh";
+    canvas.style.zIndex = "3";
+    canvas.style.pointerEvents = "none";
+    canvas.style.background = "transparent";
+    document.body.appendChild(canvas);
+
+    const ctx = canvas.getContext("2d", { alpha: true })!;
 
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -77,7 +84,6 @@ export default function SpaceCanvas() {
         ctx.lineWidth = 2;
         ctx.stroke();
 
-        // Bright head glow
         const hGrad = ctx.createRadialGradient(m.x, m.y, 0, m.x, m.y, 4);
         hGrad.addColorStop(0, `rgba(255,255,255,${alpha})`);
         hGrad.addColorStop(1, `rgba(100,180,255,0)`);
@@ -94,14 +100,9 @@ export default function SpaceCanvas() {
     return () => {
       cancelAnimationFrame(animId);
       window.removeEventListener("resize", resize);
+      if (document.body.contains(canvas)) document.body.removeChild(canvas);
     };
   }, []);
 
-  return (
-    <canvas
-      ref={meteorRef}
-      className="fixed inset-0 pointer-events-none"
-      style={{ zIndex: 3, background: "transparent" }}
-    />
-  );
+  return null;
 }

@@ -9,7 +9,7 @@ export default function EarthGlobe() {
     const mount = mountRef.current;
     if (!mount) return;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0x00000a, 1);
@@ -25,7 +25,7 @@ export default function EarthGlobe() {
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.z = 2.8;
+    camera.position.z = 2.2;
 
     const textureLoader = new THREE.TextureLoader();
     const earthTex = textureLoader.load("/earth_day.jpg");
@@ -63,16 +63,19 @@ export default function EarthGlobe() {
     scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xffffff, size: 0.12, sizeAttenuation: true })));
 
     // Lighting
-    scene.add(new THREE.AmbientLight(0x222244, 0.8));
-    const sun = new THREE.DirectionalLight(0xffffff, 1.4);
+    scene.add(new THREE.AmbientLight(0x334466, 1.2));
+    const sun = new THREE.DirectionalLight(0xffffff, 2.0);
     sun.position.set(5, 3, 5);
     scene.add(sun);
+    const fill = new THREE.DirectionalLight(0x4488ff, 0.4);
+    fill.position.set(-5, -2, -3);
+    scene.add(fill);
 
-    // Mouse parallax
+    // Mouse parallax — subtle drift only
     let mouseX = 0, mouseY = 0;
     const onMouseMove = (e: MouseEvent) => {
-      mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-      mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+      mouseX = (e.clientX / window.innerWidth - 0.5) * 0.6;
+      mouseY = (e.clientY / window.innerHeight - 0.5) * 0.4;
     };
     window.addEventListener("mousemove", onMouseMove);
 
@@ -89,8 +92,8 @@ export default function EarthGlobe() {
       earth.rotation.y += 0.0008;
       clouds.rotation.y += 0.001;
       earth.rotation.x += 0.00015;
-      camera.position.x += (mouseX * 0.4 - camera.position.x) * 0.04;
-      camera.position.y += (-mouseY * 0.3 - camera.position.y) * 0.04;
+      camera.position.x += (mouseX * 0.3 - camera.position.x) * 0.03;
+      camera.position.y += (-mouseY * 0.2 - camera.position.y) * 0.03;
       camera.lookAt(scene.position);
       renderer.render(scene, camera);
     };
