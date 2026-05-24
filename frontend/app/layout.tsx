@@ -23,10 +23,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        {/* Fixed Earth globe — always in background across all pages */}
-        <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 0 }}>
-          <EarthGlobe />
-        </div>
+        {/* Mounts the Earth canvas directly to body via useEffect */}
+        <EarthGlobe />
         {/* Dark vignette so page content is readable over the globe */}
         <div
           className="fixed inset-0 pointer-events-none"

@@ -13,7 +13,15 @@ export default function EarthGlobe() {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(0x000000, 0);
-    mount.appendChild(renderer.domElement);
+    const canvas = renderer.domElement;
+    canvas.style.position = "fixed";
+    canvas.style.top = "0";
+    canvas.style.left = "0";
+    canvas.style.width = "100vw";
+    canvas.style.height = "100vh";
+    canvas.style.zIndex = "0";
+    canvas.style.pointerEvents = "none";
+    document.body.appendChild(canvas);
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -93,9 +101,9 @@ export default function EarthGlobe() {
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("resize", onResize);
       renderer.dispose();
-      if (mount.contains(renderer.domElement)) mount.removeChild(renderer.domElement);
+      if (document.body.contains(canvas)) document.body.removeChild(canvas);
     };
   }, []);
 
-  return <div ref={mountRef} className="w-full h-full" />;
+  return <div ref={mountRef} />;
 }
