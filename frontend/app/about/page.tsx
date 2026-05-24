@@ -59,7 +59,7 @@ export default function AboutPage() {
           <div className="relative max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <p className="font-mono text-xs text-accent tracking-[0.3em] uppercase mb-5">About VajrX Technology</p>
-              <h1 className="font-display font-bold text-5xl md:text-7xl text-foreground tracking-tight leading-tight mb-6">
+              <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-foreground tracking-tight leading-tight mb-6">
                 Engineering Sovereignty.
                 <span className="block text-accent">Built in India.</span>
               </h1>

@@ -67,7 +67,7 @@ export default function ServicesPage() {
           <div className="relative max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <p className="font-mono text-xs text-accent tracking-[0.3em] uppercase mb-5">Services</p>
-              <h1 className="font-display font-bold text-5xl md:text-7xl text-foreground leading-tight mb-6">What We Build</h1>
+              <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-foreground leading-tight mb-6">What We Build</h1>
               <p className="text-muted text-lg leading-relaxed max-w-2xl">
                 We take your idea and build it — from concept to working prototype. Three engineering domains. One standard: precision, reliability, and indigenous design.
               </p>
@@ -92,7 +92,7 @@ export default function ServicesPage() {
                       <div className="flex items-start justify-between mb-4">
                         <span className={`font-mono text-xs ${s.accent} tracking-widest opacity-60`}>{s.code}</span>
                       </div>
-                      <h2 className={`font-display font-bold text-4xl ${s.accent} mb-4`}>{s.domain}</h2>
+                      <h2 className={`font-display font-bold text-2xl md:text-4xl ${s.accent} mb-4`}>{s.domain}</h2>
                       <p className="text-muted text-sm leading-relaxed">{s.description}</p>
                     </div>
                     <div className="lg:col-span-8">
@@ -120,7 +120,7 @@ export default function ServicesPage() {
               <div className="lg:col-span-4">
                 <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                   <p className="font-mono text-xs text-accent tracking-[0.25em] uppercase mb-3">Engagement Models</p>
-                  <h2 className="font-display font-bold text-4xl text-foreground leading-tight mb-5">How We Work Together</h2>
+                  <h2 className="font-display font-bold text-2xl md:text-4xl text-foreground leading-tight mb-5">How We Work Together</h2>
                   <div className="flex items-center gap-3 mb-5">
                     <div className="h-px w-8 bg-accent" />
                     <div className="h-px w-4 bg-accent/30" />

@@ -5,8 +5,8 @@ interface LogoProps {
   size?: "sm" | "md" | "lg";
 }
 
-const sizeMap = { sm: "text-2xl", md: "text-3xl", lg: "text-4xl" };
-const subSizeMap = { sm: "text-[10px]", md: "text-xs", lg: "text-sm" };
+const sizeMap = { sm: "text-xl md:text-2xl", md: "text-2xl md:text-3xl", lg: "text-3xl md:text-4xl" };
+const subSizeMap = { sm: "text-[9px]", md: "text-[10px] md:text-xs", lg: "text-xs md:text-sm" };
 
 export default function Logo({ size = "md" }: LogoProps) {
   return (

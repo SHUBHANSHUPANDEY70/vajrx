@@ -23,7 +23,7 @@ export default function CredibilityBanner() {
               transition={{ duration: 0.45 }}
             >
               <p className="font-mono text-xs text-accent tracking-[0.25em] uppercase mb-3">Institutional Affiliations</p>
-              <h2 className="font-display font-bold text-4xl text-foreground leading-tight mb-4">Trusted By</h2>
+              <h2 className="font-display font-bold text-3xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-4">Trusted By</h2>
               <div className="flex items-center gap-3 mb-5">
                 <div className="h-px w-8 bg-accent" />
                 <div className="h-px w-4 bg-accent/30" />

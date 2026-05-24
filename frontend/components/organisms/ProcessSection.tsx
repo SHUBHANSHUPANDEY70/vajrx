@@ -41,7 +41,7 @@ export default function ProcessSection() {
               transition={{ duration: 0.5 }}
             >
               <p className="font-mono text-xs text-accent tracking-[0.25em] uppercase mb-3">Methodology</p>
-              <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground leading-tight mb-5">How We Build</h2>
+              <h2 className="font-display font-bold text-3xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-5">How We Build</h2>
               <div className="flex items-center gap-3 mb-6">
                 <div className="h-px w-8 bg-accent" />
                 <div className="h-px w-4 bg-accent/30" />
