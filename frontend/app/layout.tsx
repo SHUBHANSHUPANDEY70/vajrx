@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import dynamic from "next/dynamic";
+
+const SpaceCanvas = dynamic(() => import("@/components/organisms/SpaceCanvas"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "VajrX Technology — Forged for the Frontier",
@@ -18,7 +21,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SpaceCanvas />
+        <div className="relative" style={{ zIndex: 1 }}>
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

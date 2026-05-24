@@ -30,9 +30,9 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="py-28 px-6 bg-background">
+    <section className="py-20 px-4 sm:px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-4">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -64,21 +64,19 @@ export default function ProcessSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.45 }}
-                  className="group p-8 hover:bg-white/5 transition-all duration-300 relative overflow-hidden"
+                  className="group p-5 sm:p-8 hover:bg-white/5 transition-all duration-300 relative overflow-hidden"
                 >
                   <div className="absolute left-0 top-0 bottom-0 w-px bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="grid grid-cols-12 gap-6 items-start">
-                    <div className="col-span-2">
-                      <span className="font-display font-bold text-6xl text-white/10 group-hover:text-accent/30 transition-colors duration-300 tabular-nums">
-                        {step.number}
-                      </span>
-                    </div>
-                    <div className="col-span-10">
-                      <h3 className="font-display font-bold text-2xl text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
+                  <div className="flex items-start gap-4 sm:gap-6">
+                    <span className="font-display font-bold text-3xl sm:text-5xl text-white/10 group-hover:text-accent/30 transition-colors duration-300 tabular-nums shrink-0 leading-none mt-0.5">
+                      {step.number}
+                    </span>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="font-display font-bold text-lg sm:text-2xl text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
                         {step.title}
                       </h3>
                       <p className="text-muted text-sm leading-relaxed mb-3">{step.description}</p>
-                      <p className="font-mono text-xs text-accent/60 group-hover:text-accent/80 transition-colors duration-300">{step.detail}</p>
+                      <p className="font-mono text-xs text-accent/60 group-hover:text-accent/80 transition-colors duration-300 break-words">{step.detail}</p>
                     </div>
                   </div>
                 </motion.div>
