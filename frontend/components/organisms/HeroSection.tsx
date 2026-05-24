@@ -40,8 +40,8 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               className="font-display font-bold text-foreground leading-[0.95] tracking-tight mb-6"
             >
-              <span className="block text-5xl md:text-7xl lg:text-8xl">Forged for</span>
-              <span className="block text-5xl md:text-7xl lg:text-8xl text-accent">the Frontier.</span>
+              <span className="block text-6xl md:text-8xl lg:text-[10rem]">Forged for</span>
+              <span className="block text-6xl md:text-8xl lg:text-[10rem] text-accent">the Frontier.</span>
             </motion.h1>
 
             <motion.p
@@ -105,7 +105,7 @@ export default function HeroSection() {
                     transition={{ delay: 0.6 + i * 0.1 }}
                     className="p-6 group hover:bg-surface-raised transition-colors duration-200"
                   >
-                    <div className="font-display font-bold text-3xl text-foreground tabular-nums mb-1.5 group-hover:text-accent transition-colors duration-200">
+                    <div className="font-display font-bold text-5xl text-foreground tabular-nums mb-1.5 group-hover:text-accent transition-colors duration-200">
                       {stat.value}
                     </div>
                     <div className="font-mono text-xs text-muted uppercase tracking-wide leading-snug">{stat.label}</div>
@@ -128,8 +128,8 @@ export default function HeroSection() {
         >
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col gap-1">
-              <span className="font-display font-bold text-2xl text-foreground tabular-nums">{stat.value}</span>
-              <span className="font-mono text-xs text-muted uppercase tracking-wide">{stat.label}</span>
+              <span className="font-display font-bold text-4xl text-foreground tabular-nums">{stat.value}</span>
+              <span className="font-mono text-sm text-muted uppercase tracking-wide">{stat.label}</span>
             </div>
           ))}
         </motion.div>

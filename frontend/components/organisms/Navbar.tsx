@@ -31,7 +31,7 @@ export default function Navbar() {
           : "bg-background/80 backdrop-blur-sm border-b border-border/50"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Logo />
 
         <div className="hidden md:flex items-center gap-8">

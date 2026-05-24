@@ -21,7 +21,7 @@ export default function CTABanner() {
           <div className="px-12 py-16 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-8">
               <p className="font-mono text-xs text-accent tracking-[0.25em] uppercase mb-4">Open for Collaboration</p>
-              <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground leading-tight mb-4">
+              <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground leading-tight mb-4">
                 Have a project that needs building?
               </h2>
               <p className="text-muted text-base leading-relaxed max-w-xl mb-2">

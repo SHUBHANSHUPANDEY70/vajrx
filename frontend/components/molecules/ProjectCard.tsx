@@ -20,7 +20,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <StatusBadge status={project.status} />
           </div>
 
-          <h3 className="font-display font-bold text-lg text-foreground leading-snug group-hover:text-accent transition-colors duration-300">
+          <h3 className="font-display font-bold text-xl text-foreground leading-snug group-hover:text-accent transition-colors duration-300">
             {project.title}
           </h3>
 

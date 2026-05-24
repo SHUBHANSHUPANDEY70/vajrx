@@ -81,7 +81,7 @@ export default function DomainCard({ domain, description, capabilities }: Domain
         </div>
 
         <div>
-          <h3 className={`font-display text-xl font-bold ${config.accent} mb-2`}>{domain}</h3>
+          <h3 className={`font-display text-2xl font-bold ${config.accent} mb-2`}>{domain}</h3>
           <p className="text-muted text-sm leading-relaxed">{description}</p>
         </div>
 

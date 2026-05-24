@@ -12,7 +12,7 @@ export default function ContactPage() {
           <div className="relative max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <p className="font-mono text-xs text-accent tracking-[0.3em] uppercase mb-5">Contact</p>
-              <h1 className="font-display font-bold text-4xl md:text-5xl text-foreground leading-tight mb-6">
+              <h1 className="font-display font-bold text-5xl md:text-7xl text-foreground leading-tight mb-6">
                 Get in Touch
               </h1>
               <p className="text-muted text-lg leading-relaxed max-w-xl">

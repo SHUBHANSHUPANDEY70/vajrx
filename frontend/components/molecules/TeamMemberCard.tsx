@@ -30,7 +30,7 @@ export default function TeamMemberCard({ name, title, bio, imageSrc, featured = 
       </div>
 
       <div className="p-6 flex flex-col gap-2 flex-1">
-        <h3 className="font-display font-bold text-lg text-foreground group-hover:text-accent transition-colors duration-300">
+        <h3 className="font-display font-bold text-2xl text-foreground group-hover:text-accent transition-colors duration-300">
           {name}
         </h3>
         <p className="font-mono text-xs text-accent tracking-wide uppercase">{title}</p>

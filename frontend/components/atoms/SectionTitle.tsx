@@ -22,7 +22,7 @@ export default function SectionTitle({
           {label}
         </p>
       )}
-      <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground tracking-tight leading-tight">
+      <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground tracking-tight leading-tight">
         {children}
       </h2>
       {subtitle && (

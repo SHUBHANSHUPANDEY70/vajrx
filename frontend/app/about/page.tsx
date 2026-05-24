@@ -59,7 +59,7 @@ export default function AboutPage() {
           <div className="relative max-w-4xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <p className="font-mono text-xs text-accent tracking-[0.3em] uppercase mb-5">About VajrX Technology</p>
-              <h1 className="font-display font-bold text-4xl md:text-6xl text-foreground tracking-tight leading-tight mb-6">
+              <h1 className="font-display font-bold text-5xl md:text-7xl text-foreground tracking-tight leading-tight mb-6">
                 Engineering Sovereignty.
                 <span className="block text-accent">Built in India.</span>
               </h1>
@@ -84,7 +84,7 @@ export default function AboutPage() {
                 className="p-10"
               >
                 <p className="font-mono text-xs text-accent tracking-widest uppercase mb-4">Mission</p>
-                <h2 className="font-display font-bold text-2xl text-foreground mb-5">What We Are Here to Do</h2>
+                <h2 className="font-display font-bold text-3xl text-foreground mb-5">What We Are Here to Do</h2>
                 <p className="text-muted leading-relaxed mb-4">
                   To develop cost-effective, high-reliability indigenous technology solutions that reduce India's dependence on imported systems — across defence, electronics, and medical domains.
                 </p>
@@ -100,7 +100,7 @@ export default function AboutPage() {
                 className="p-10"
               >
                 <p className="font-mono text-xs text-accent tracking-widest uppercase mb-4">Vision</p>
-                <h2 className="font-display font-bold text-2xl text-foreground mb-5">Where We Are Going</h2>
+                <h2 className="font-display font-bold text-3xl text-foreground mb-5">Where We Are Going</h2>
                 <p className="text-muted leading-relaxed mb-4">
                   To become a formidable participant in India's next-generation engineering landscape — a company known for precision, resilience, and strategic relevance.
                 </p>
@@ -132,7 +132,7 @@ export default function AboutPage() {
                     <span className="font-mono text-xs text-accent/50 tabular-nums">0{i + 1}</span>
                     <div className="h-px flex-1 bg-border" />
                   </div>
-                  <h3 className="font-display font-bold text-lg text-foreground mb-3 group-hover:text-accent transition-colors duration-300">
+                  <h3 className="font-display font-bold text-xl text-foreground mb-3 group-hover:text-accent transition-colors duration-300">
                     {v.title}
                   </h3>
                   <p className="text-muted text-sm leading-relaxed">{v.description}</p>
@@ -175,7 +175,7 @@ export default function AboutPage() {
                       </span>
                     </div>
                     <div className="md:col-span-9">
-                      <h3 className="font-display font-bold text-lg text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
+                      <h3 className="font-display font-bold text-xl text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
                         {item.title}
                       </h3>
                       <p className="text-muted text-sm leading-relaxed">{item.desc}</p>

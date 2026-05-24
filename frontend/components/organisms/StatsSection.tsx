@@ -23,10 +23,10 @@ export default function StatsSection() {
               className="group px-8 py-8 flex flex-col gap-1.5 hover:bg-surface-raised transition-colors duration-300"
             >
               <div className="flex items-baseline gap-2">
-                <span className="font-display font-bold text-3xl text-foreground tabular-nums group-hover:text-accent transition-colors duration-300">
+                <span className="font-display font-bold text-5xl text-foreground tabular-nums group-hover:text-accent transition-colors duration-300">
                   {m.value}
                 </span>
-                <span className="text-sm font-semibold text-muted tracking-wide">{m.unit}</span>
+                <span className="text-base font-semibold text-muted tracking-wide">{m.unit}</span>
               </div>
               <p className="font-mono text-xs text-muted/60">{m.description}</p>
             </motion.div>

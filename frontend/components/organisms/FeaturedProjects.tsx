@@ -11,7 +11,7 @@ export default function FeaturedProjects() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
             <p className="font-mono text-xs text-accent tracking-[0.25em] uppercase mb-3">Portfolio</p>
-            <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground leading-tight mb-3">
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground leading-tight mb-3">
               Current Projects
             </h2>
             <div className="flex items-center gap-3 mb-4">

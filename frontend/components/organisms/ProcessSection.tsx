@@ -41,7 +41,7 @@ export default function ProcessSection() {
               transition={{ duration: 0.5 }}
             >
               <p className="font-mono text-xs text-accent tracking-[0.25em] uppercase mb-3">Methodology</p>
-              <h2 className="font-display font-bold text-3xl md:text-4xl text-foreground leading-tight mb-5">How We Build</h2>
+              <h2 className="font-display font-bold text-4xl md:text-5xl text-foreground leading-tight mb-5">How We Build</h2>
               <div className="flex items-center gap-3 mb-6">
                 <div className="h-px w-8 bg-accent" />
                 <div className="h-px w-4 bg-accent/30" />
@@ -69,12 +69,12 @@ export default function ProcessSection() {
                   <div className="absolute left-0 top-0 bottom-0 w-px bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="grid grid-cols-12 gap-6 items-start">
                     <div className="col-span-2">
-                      <span className="font-display font-bold text-4xl text-border group-hover:text-accent/30 transition-colors duration-300 tabular-nums">
+                      <span className="font-display font-bold text-6xl text-border group-hover:text-accent/30 transition-colors duration-300 tabular-nums">
                         {step.number}
                       </span>
                     </div>
                     <div className="col-span-10">
-                      <h3 className="font-display font-bold text-xl text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
+                      <h3 className="font-display font-bold text-2xl text-foreground mb-2 group-hover:text-accent transition-colors duration-300">
                         {step.title}
                       </h3>
                       <p className="text-muted text-sm leading-relaxed mb-3">{step.description}</p>
