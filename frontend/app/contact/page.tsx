@@ -22,7 +22,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-black/60">
+        <section className="py-16 px-6">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
             <motion.div
               initial={{ opacity: 0, y: 16 }}

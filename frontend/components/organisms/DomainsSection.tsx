@@ -47,7 +47,7 @@ const domains = [
 
 export default function DomainsSection() {
   return (
-    <section className="py-28 px-6 bg-black/60 border-y border-white/10">
+    <section className="py-28 px-6 border-y border-white/10">
       <div className="max-w-7xl mx-auto">
         <SectionTitle
           label="Engineering Domains"

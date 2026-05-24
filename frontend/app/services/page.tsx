@@ -75,7 +75,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-24 px-6 bg-black/60">
+        <section className="py-24 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col gap-6">
               {services.map((s, i) => (
@@ -114,7 +114,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-24 px-6 bg-black/70 border-y border-white/10">
+        <section className="py-24 px-6 border-y border-white/10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
               <div className="lg:col-span-4">
@@ -154,7 +154,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="py-24 px-6 bg-black/60">
+        <section className="py-24 px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 16 }}

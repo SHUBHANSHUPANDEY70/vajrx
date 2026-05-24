@@ -24,7 +24,7 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-black/60">
+        <section className="py-16 px-6">
           <div className="max-w-5xl mx-auto">
             <ProjectsGrid />
           </div>

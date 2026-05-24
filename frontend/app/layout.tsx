@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Dark vignette so page content is readable over the globe */}
         <div
           className="fixed inset-0 pointer-events-none"
-          style={{ zIndex: 1, background: "radial-gradient(ellipse at center, rgba(0,0,10,0.45) 0%, rgba(0,0,10,0.75) 60%, rgba(0,0,10,0.96) 100%)" }}
+          style={{ zIndex: 1, background: "radial-gradient(ellipse at center, rgba(0,0,10,0.15) 0%, rgba(0,0,10,0.5) 65%, rgba(0,0,10,0.88) 100%)" }}
         />
         {/* Meteor streaks on top of everything */}
         <SpaceCanvas />
