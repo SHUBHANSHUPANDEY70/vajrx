@@ -14,7 +14,7 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent z-[1]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-24 sm:py-32 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left */}
           <div className="lg:col-span-7">

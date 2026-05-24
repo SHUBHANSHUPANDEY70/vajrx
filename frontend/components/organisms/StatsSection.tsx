@@ -20,13 +20,13 @@ export default function StatsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.4 }}
-              className="group px-8 py-8 flex flex-col gap-1.5 hover:bg-white/5 transition-colors duration-300"
+              className="group px-4 sm:px-8 py-5 sm:py-8 flex flex-col gap-1 sm:gap-1.5 hover:bg-white/5 transition-colors duration-300"
             >
-              <div className="flex items-baseline gap-2">
-                <span className="font-display font-bold text-5xl text-foreground tabular-nums group-hover:text-accent transition-colors duration-300">
+              <div className="flex items-baseline gap-1.5 sm:gap-2 flex-wrap">
+                <span className="font-display font-bold text-3xl sm:text-5xl text-foreground tabular-nums group-hover:text-accent transition-colors duration-300">
                   {m.value}
                 </span>
-                <span className="text-base font-semibold text-muted tracking-wide">{m.unit}</span>
+                <span className="text-sm sm:text-base font-semibold text-muted tracking-wide">{m.unit}</span>
               </div>
               <p className="font-mono text-xs text-muted/60">{m.description}</p>
             </motion.div>

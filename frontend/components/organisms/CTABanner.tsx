@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function CTABanner() {
   return (
-    <section className="py-24 px-6 border-t border-white/10">
+    <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 border-t border-white/10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -18,7 +18,7 @@ export default function CTABanner() {
           <div className="absolute bottom-0 left-0 w-8 h-8 border-l border-b border-accent/40" />
           <div className="absolute bottom-0 right-0 w-8 h-8 border-r border-b border-accent/40" />
 
-          <div className="px-12 py-16 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="px-5 py-10 sm:px-10 sm:py-14 lg:px-12 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             <div className="lg:col-span-8">
               <p className="font-mono text-xs text-accent tracking-[0.25em] uppercase mb-4">Open for Collaboration</p>
               <h2 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-foreground leading-tight mb-4">

@@ -30,7 +30,7 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="py-20 px-4 sm:px-6">
+    <section className="py-14 sm:py-20 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-4">

@@ -6,9 +6,9 @@ import Link from "next/link";
 
 export default function FeaturedProjects() {
   return (
-    <section className="py-28 px-6">
+    <section className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 sm:mb-14">
           <div>
             <p className="font-mono text-xs text-accent tracking-[0.25em] uppercase mb-3">Portfolio</p>
             <h2 className="font-display font-bold text-3xl md:text-5xl lg:text-6xl text-foreground leading-tight mb-3">

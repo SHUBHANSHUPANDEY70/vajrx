@@ -70,7 +70,7 @@ export default function DomainCard({ domain, description, capabilities }: Domain
     <div className={`group relative h-full glass-card border ${config.border} ${config.hoverBorder} transition-all duration-350 overflow-hidden hover:shadow-lg hover:shadow-accent/5`}>
       <div className={`h-px w-0 group-hover:w-full transition-all duration-500 ease-out ${config.topLine}`} />
 
-      <div className="p-8 flex flex-col gap-5">
+      <div className="p-5 sm:p-8 flex flex-col gap-4 sm:gap-5">
         <div className="flex items-start justify-between">
           <div className={`${config.accent} opacity-70 group-hover:opacity-100 transition-opacity duration-300`}>
             {config.icon}
@@ -85,7 +85,7 @@ export default function DomainCard({ domain, description, capabilities }: Domain
           <p className="text-muted text-sm leading-relaxed">{description}</p>
         </div>
 
-        <div className="overflow-hidden max-h-0 group-hover:max-h-80 transition-all duration-500 ease-in-out">
+        <div className="overflow-hidden max-h-80 md:max-h-0 md:group-hover:max-h-80 transition-all duration-500 ease-in-out">
           <div className="border-t border-white/10 pt-5 flex flex-col gap-3">
             <p className="font-mono text-xs text-muted tracking-[0.2em] uppercase">Capabilities</p>
             <ul className="flex flex-col gap-2.5">

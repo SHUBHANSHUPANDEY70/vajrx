@@ -27,7 +27,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <p className="text-muted text-sm leading-relaxed flex-1">{project.shortDescription}</p>
 
           {project.highlights && (
-            <div className="overflow-hidden max-h-0 group-hover:max-h-56 transition-all duration-500 ease-in-out">
+            <div className="overflow-hidden max-h-56 md:max-h-0 md:group-hover:max-h-56 transition-all duration-500 ease-in-out">
               <div className="border-t border-white/10 pt-4 flex flex-col gap-2.5">
                 <p className="font-mono text-xs text-muted tracking-[0.2em] uppercase mb-1">Key Highlights</p>
                 <ul className="flex flex-col gap-2">
