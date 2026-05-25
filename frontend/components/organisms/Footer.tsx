@@ -12,6 +12,7 @@ const domains = [
   { label: "Electronics", href: "/services" },
   { label: "Defence", href: "/services" },
   { label: "Medical", href: "/services" },
+  { label: "AR/VR", href: "/services" },
 ];
 
 export default function Footer() {
@@ -23,15 +24,12 @@ export default function Footer() {
           <div className="lg:col-span-2 flex flex-col gap-5">
             <Logo size="lg" />
             <p className="text-muted text-sm leading-relaxed max-w-sm">
-              Indigenous engineering startup building precision systems across Electronics, Defence, and Medical domains. Designed and built in India.
+              Indigenous engineering startup building precision systems across Electronics, Defence, Medical, and AR/VR domains. Designed and built in India.
             </p>
             <div className="flex items-center gap-2 mt-1">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent animate-pulse-slow" />
               <span className="font-mono text-xs text-muted/60 tracking-wide">Jabalpur, Madhya Pradesh, India</span>
             </div>
-            <p className="font-mono text-xs text-muted/40 leading-relaxed max-w-sm">
-              VajrX Technology is a pre-revenue startup in active development. All projects are original, indigenously conceived and engineered.
-            </p>
           </div>
 
           {/* Navigation */}
@@ -42,17 +40,15 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="group flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors duration-200"
+                  className="text-sm text-muted hover:text-foreground transition-colors duration-200"
                 >
-                  <span className="h-px w-3 bg-border group-hover:bg-accent group-hover:w-4 transition-all duration-200" />
                   {link.label}
                 </Link>
               ))}
               <Link
                 href="/submit-idea"
-                className="group flex items-center gap-2 text-sm text-accent/70 hover:text-accent transition-colors duration-200 mt-1"
+                className="text-sm text-accent/70 hover:text-accent transition-colors duration-200 mt-1"
               >
-                <span className="h-px w-3 bg-accent/30 group-hover:bg-accent group-hover:w-4 transition-all duration-200" />
                 Submit an Idea
               </Link>
             </div>

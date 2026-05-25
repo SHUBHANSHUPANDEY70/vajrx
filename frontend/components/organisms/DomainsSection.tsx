@@ -20,7 +20,7 @@ const domains = [
   {
     domain: "Defence" as const,
     description:
-      "Indigenous defence technology — from lightning detection networks to NavIC-integrated systems — engineered for national significance and operational resilience.",
+      "Indigenous defence technology from lightning detection networks to NavIC-integrated systems engineered for national significance and operational resilience.",
     capabilities: [
       "Indigenous alternatives to imported defence systems",
       "NavIC-integrated navigation and tracking",
@@ -43,22 +43,35 @@ const domains = [
       "Patient monitoring and data analytics",
     ],
   },
+  {
+    domain: "AR/VR" as const,
+    description:
+      "Immersive simulation and spatial computing solutions built for defence training, medical procedures, and industrial operations requiring precision extended reality.",
+    capabilities: [
+      "AR training overlays for technical and tactical workflows",
+      "VR mission rehearsal and simulation environments",
+      "Mixed-reality interface design and system integration",
+      "Head-mounted display (HMD) hardware development",
+      "Real-time 3D rendering and spatial mapping",
+      "Defence and medical simulation platforms",
+    ],
+  },
 ];
 
 export default function DomainsSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 border-y border-white/10">
+    <section className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 border-y border-white/10 section-overlay">
       <div className="max-w-7xl mx-auto">
         <SectionTitle
           label="Engineering Domains"
-          subtitle="Three disciplines. One unified mission: build what India needs."
+          subtitle="Four disciplines. One unified mission: build what India needs."
         >
           What We Build
         </SectionTitle>
         <p className="text-muted text-sm mb-10 max-w-xl -mt-8 leading-relaxed">
           Each vertical is a self-contained engineering discipline with dedicated expertise and tooling.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 border border-white/10">
           {domains.map((d, i) => (
             <motion.div
               key={d.domain}
@@ -66,7 +79,14 @@ export default function DomainsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.12, duration: 0.45 }}
-              className={`${i < domains.length - 1 ? "md:border-r border-white/10" : ""} border-b md:border-b-0 border-white/10 last:border-b-0`}
+              className={[
+                "border-white/10",
+                i < domains.length - 1 ? "border-b" : "",
+                i < 2 ? "sm:border-b" : "sm:border-b-0",
+                i % 2 === 0 ? "sm:border-r" : "sm:border-r-0",
+                i < domains.length - 1 ? "xl:border-r" : "xl:border-r-0",
+                "xl:border-b-0",
+              ].filter(Boolean).join(" ")}
             >
               <DomainCard
                 domain={d.domain}

@@ -1,27 +1,29 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
 interface LogoProps {
   size?: "sm" | "md" | "lg";
 }
 
-const sizeMap = { sm: "text-xl md:text-2xl", md: "text-2xl md:text-3xl", lg: "text-3xl md:text-4xl" };
-const subSizeMap = { sm: "text-[9px]", md: "text-[10px] md:text-xs", lg: "text-xs md:text-sm" };
+const sizeMap = {
+  sm: { width: 80, height: 28 },
+  md: { width: 110, height: 38 },
+  lg: { width: 130, height: 44 },
+};
 
 export default function Logo({ size = "md" }: LogoProps) {
+  const dims = sizeMap[size];
   return (
-    <Link href="/" className="inline-flex items-end gap-1.5 group leading-none">
-      <div className="flex items-baseline gap-0.5">
-        <span className={`font-display font-bold tracking-tight ${sizeMap[size]} text-foreground group-hover:text-accent transition-colors duration-200`}>
-          Vajr
-        </span>
-        <span className={`font-display font-bold tracking-tight ${sizeMap[size]} text-accent group-hover:text-foreground transition-colors duration-200`}>
-          X
-        </span>
-      </div>
-      <span className={`font-mono ${subSizeMap[size]} text-muted tracking-widest uppercase mb-0.5 group-hover:text-accent/70 transition-colors duration-200`}>
-        Technology
-      </span>
+    <Link href="/" className="inline-flex items-center leading-none">
+      <Image
+        src="/vajrx.png"
+        alt="VajrX Technology"
+        width={dims.width}
+        height={dims.height}
+        className="object-contain"
+        priority
+      />
     </Link>
   );
 }

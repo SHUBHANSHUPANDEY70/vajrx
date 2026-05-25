@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 
 const metrics = [
-  { value: "03", unit: "Domains", description: "Electronics, Defence, Medical" },
+  { value: "04", unit: "Domains", description: "Electronics, Defence, Medical, AR/VR" },
   { value: "05+", unit: "Partnerships", description: "ISRO, DRDO, AAI, Army" },
   { value: "02", unit: "Projects", description: "Completed and in progress" },
   { value: "100%", unit: "Indigenous", description: "Designed and built in India" },
@@ -10,7 +10,7 @@ const metrics = [
 
 export default function StatsSection() {
   return (
-    <section className="border-y border-white/10">
+    <section className="border-y border-white/10 section-overlay">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 divide-white/10">
           {metrics.map((m, i) => (

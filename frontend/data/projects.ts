@@ -1,5 +1,5 @@
 export type ProjectStatus = "Completed" | "In Progress";
-export type ProjectDomain = "Electronics" | "Defence" | "Medical";
+export type ProjectDomain = "Electronics" | "Defence" | "Medical" | "AR/VR";
 
 export interface Project {
   slug: string;

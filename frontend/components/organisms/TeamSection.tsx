@@ -7,8 +7,7 @@ const team = [
   {
     name: "Shubhanshu Pandey",
     title: "Founder & Director",
-    badge: "Director",
-    bio: "Electrical Engineering student with a strong focus on R&D and embedded systems. Research Intern at NRSC, ISRO, working on indigenization of LDSN lightning detection devices and NavIC integration. National-level aerospace modeling recognition (ISROxIITR 2024). Driving VajrX Technology's vision of indigenous engineering across defence and electronics.",
+    bio: "Electrical Engineer with a strong focus on R&D and embedded systems. Research Intern at NRSC, ISRO, working on indigenization of LDSN lightning detection devices and NavIC integration. Driving VajrX Technology's vision of indigenous engineering across defence and electronics.",
     imageSrc: "/team/shubhanshu.svg",
     featured: true,
   },
@@ -22,7 +21,7 @@ const team = [
   {
     name: "Avani Pandit",
     title: "Founder & Director",
-    bio: "Electrical systems engineer and defence-technology entrepreneur. Professional formation at ISRO (NRSC), DRDO-affiliated environments, Army Base Workshop 506, and IISc. Expert in signal processing, embedded architectures, and secure electrical infrastructures.",
+    bio: "Electrical Engineer and defence-technology entrepreneur. Professional formation at ISRO (NRSC), DRDO-affiliated environments, Army Base Workshop 506, and IISc. Expert in signal processing, embedded architectures, and secure electrical infrastructures.",
     imageSrc: "/team/avani.svg",
     featured: true,
   },

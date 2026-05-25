@@ -61,6 +61,22 @@ const domainConfig: Record<ProjectDomain, {
       </svg>
     ),
   },
+  "AR/VR": {
+    border: "border-violet-500/20",
+    hoverBorder: "group-hover:border-violet-400/60",
+    topLine: "bg-violet-400",
+    accent: "text-violet-400",
+    label: "VR",
+    icon: (
+      <svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="2" y="9" width="24" height="12" rx="4" />
+        <circle cx="10" cy="15" r="2.5" />
+        <circle cx="18" cy="15" r="2.5" />
+        <path d="M12.5 15h3" />
+        <path d="M14 9V6M11 6h6" />
+      </svg>
+    ),
+  },
 };
 
 export default function DomainCard({ domain, description, capabilities }: DomainCardProps) {
@@ -90,8 +106,7 @@ export default function DomainCard({ domain, description, capabilities }: Domain
             <p className="font-mono text-xs text-muted tracking-[0.2em] uppercase">Capabilities</p>
             <ul className="flex flex-col gap-2.5">
               {capabilities.map((cap) => (
-                <li key={cap} className="flex items-start gap-3 text-sm text-foreground/70 leading-snug">
-                  <span className="mt-1.5 w-3 h-px bg-accent/60 shrink-0 inline-block" />
+                <li key={cap} className="text-sm text-foreground/70 leading-snug">
                   {cap}
                 </li>
               ))}

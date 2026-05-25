@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const stats = [
-  { value: "03", label: "Engineering domains" },
+  { value: "04", label: "Engineering domains" },
   { value: "05+", label: "Research partnerships" },
   { value: "02", label: "Active projects" },
   { value: "100%", label: "Indigenous components" },
@@ -12,9 +12,10 @@ const stats = [
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent z-[1]" />
+      <div className="absolute inset-0 z-[2] pointer-events-none bg-gradient-to-br from-black/50 via-black/20 to-black/10" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent z-[3]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-24 sm:py-32 w-full">
+      <div className="relative z-[4] max-w-7xl mx-auto px-4 sm:px-6 py-24 sm:py-32 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left */}
           <div className="lg:col-span-7">
@@ -48,7 +49,7 @@ export default function HeroSection() {
               transition={{ duration: 0.7, delay: 0.25 }}
               className="text-muted text-lg leading-relaxed max-w-xl mb-3"
             >
-              VajrX Technology is an indigenous engineering startup building precision systems across Electronics, Defence, and Medical domains.
+              VajrX Technology is an indigenous engineering startup building precision systems across Electronics, Defence, Medical, and AR/VR domains.
             </motion.p>
 
             <motion.p
@@ -137,7 +138,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-[4]"
       >
         <span className="font-mono text-xs text-muted/40 tracking-widest uppercase">Scroll</span>
         <motion.div
