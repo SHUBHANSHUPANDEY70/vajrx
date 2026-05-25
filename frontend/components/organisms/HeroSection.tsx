@@ -11,7 +11,7 @@ const stats = [
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center">
       <div className="absolute inset-0 z-[2] pointer-events-none bg-gradient-to-br from-black/70 via-black/40 to-black/20" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent z-[3]" />
 
@@ -37,9 +37,9 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-              className="font-display font-bold leading-[1.05] tracking-tight mb-6"
+              className="font-display font-bold leading-normal tracking-tight mb-6"
             >
-              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hero-gradient-text pb-1">Forged for</span>
+              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hero-gradient-text">Forged for</span>
               <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-accent">the Frontier.</span>
             </motion.h1>
 

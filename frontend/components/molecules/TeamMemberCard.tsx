@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 
 interface TeamMemberCardProps {
@@ -16,12 +15,10 @@ export default function TeamMemberCard({ name, title, bio, imageSrc, featured = 
       {featured && <div className="h-px bg-accent" />}
 
       <div className="relative w-full aspect-square bg-[#0a0f1a] overflow-hidden">
-        <Image
+        <img
           src={imageSrc}
           alt={name}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-          sizes="(max-width: 768px) 100vw, 33vw"
+          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
         />
         {featured && (
           <div className="absolute top-3 right-3 bg-accent text-white font-mono text-xs font-medium px-2.5 py-1 tracking-widest uppercase">
