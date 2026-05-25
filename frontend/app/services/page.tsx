@@ -49,13 +49,28 @@ const services = [
       { title: "Patient Monitoring & Analytics", detail: "Real-time data capture, processing, and clinical reporting" },
     ],
   },
+  {
+    domain: "AR/VR",
+    code: "VR",
+    border: "border-violet-500/20 hover:border-violet-400/60",
+    accent: "text-violet-500",
+    description: "Immersive simulation and spatial computing solutions engineered for defence training, surgical preparation, and industrial operations. We build extended reality systems that work in the real world, not just demonstrations.",
+    items: [
+      { title: "AR Training Overlays", detail: "Contextual augmented reality for technical, surgical, and tactical workflows" },
+      { title: "VR Mission Rehearsal", detail: "High-fidelity virtual environments for defence and operational simulation" },
+      { title: "Mixed Reality Interfaces", detail: "Spatial UI/UX design and MR system integration for industrial use" },
+      { title: "HMD Hardware Development", detail: "Head-mounted display integration, calibration, and custom hardware support" },
+      { title: "Real-Time 3D Rendering", detail: "Optimised spatial mapping and rendering pipelines for low-latency XR" },
+      { title: "Defence and Medical Simulation", detail: "Custom simulation platforms for training, planning, and procedural rehearsal" },
+    ],
+  },
 ];
 
 const engagementTypes = [
-  { type: "Project Development", description: "Full-cycle development from concept to delivered prototype. We scope, engineer, test, and document.", timeline: "4–16 weeks depending on complexity" },
-  { type: "Technical Consultation", description: "Expert review and analysis of existing systems, feasibility studies, and technical direction.", timeline: "1–2 week engagement" },
-  { type: "Research Collaboration", description: "Joint R&D with academic or institutional partners — with shared IP arrangements.", timeline: "Ongoing or project-based" },
-  { type: "Proof of Concept", description: "Rapid validation of a technical approach before full investment in development.", timeline: "2–4 weeks" },
+  { type: "Project Development", description: "Full-cycle development from concept to delivered prototype. We scope, engineer, test, and document.", timeline: "4 to 16 weeks depending on complexity" },
+  { type: "Technical Consultation", description: "Expert review and analysis of existing systems, feasibility studies, and technical direction.", timeline: "1 to 2 week engagement" },
+  { type: "Research Collaboration", description: "Joint R&D with academic or institutional partners, with shared IP arrangements.", timeline: "Ongoing or project based" },
+  { type: "Proof of Concept", description: "Rapid validation of a technical approach before full investment in development.", timeline: "2 to 4 weeks" },
 ];
 
 export default function ServicesPage() {
@@ -69,7 +84,7 @@ export default function ServicesPage() {
               <p className="font-mono text-xs text-accent tracking-[0.3em] uppercase mb-5">Services</p>
               <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-foreground leading-tight mb-6">What We Build</h1>
               <p className="text-muted text-lg leading-relaxed max-w-2xl">
-                We take your idea and build it — from concept to working prototype. Three engineering domains. One standard: precision, reliability, and indigenous design.
+                We take your idea and build it, from concept to working prototype. Four engineering domains. One standard: precision, reliability, and indigenous design.
               </p>
             </motion.div>
           </div>

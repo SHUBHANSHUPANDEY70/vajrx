@@ -9,10 +9,13 @@ interface PageLayoutProps {
 export default function PageLayout({ children }: PageLayoutProps) {
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="fixed inset-0 z-[2] pointer-events-none" style={{ background: "rgba(0,0,8,0.18)" }} />
-      <Navbar />
-      <main className="flex-1">{children}</main>
-      <Footer />
+      {/* Dark layer between earth globe (z-1) and all content (z-3+) */}
+      <div className="fixed inset-0 z-[2] pointer-events-none" style={{ background: "rgba(0,0,8,0.22)" }} />
+      <div className="relative z-[3] flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </div>
     </div>
   );
 }
