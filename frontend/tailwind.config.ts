@@ -18,7 +18,7 @@ const config: Config = {
         "surface-raised": "rgba(255,255,255,0.08)",
         border: "rgba(255,255,255,0.1)",
         "border-subtle": "rgba(255,255,255,0.06)",
-        muted: "rgba(255,255,255,0.55)",
+        muted: "rgba(255,255,255,0.78)",
         foreground: "#ffffff",
         brass: "#8B6A3E",
       },
