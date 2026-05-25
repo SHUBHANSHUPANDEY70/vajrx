@@ -12,7 +12,7 @@ const steps = [
     number: "02",
     title: "Evaluate",
     description: "Our team conducts a technical and feasibility analysis. We assess complexity, required resources, timelines, and strategic fit within our engineering domains.",
-    detail: "24–48 hour response time on all submissions",
+    detail: "24 to 48 hour response time on all submissions",
   },
   {
     number: "03",
@@ -50,7 +50,7 @@ export default function ProcessSection() {
                 Our engineering process is structured, transparent, and repeatable. From first contact to final delivery, every step is deliberate.
               </p>
               <p className="text-muted/70 text-sm leading-relaxed">
-                We apply aerospace-grade discipline to every project regardless of scale — because the systems we build may one day operate in environments where failure is not an option.
+                We apply aerospace grade discipline to every project regardless of scale, because the systems we build may one day operate in environments where failure is not an option.
               </p>
             </motion.div>
           </div>

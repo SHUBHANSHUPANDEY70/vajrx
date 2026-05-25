@@ -22,14 +22,14 @@ const team = [
     name: "Avani Pandit",
     title: "Founder & Director",
     bio: "Electrical Engineer and defence-technology entrepreneur. Professional formation at ISRO (NRSC), DRDO-affiliated environments, Army Base Workshop 506, and IISc. Expert in signal processing, embedded architectures, and secure electrical infrastructures.",
-    imageSrc: "/team/avani.svg",
+    imageSrc: "/team/avani.jpg",
     featured: true,
   },
 ];
 
 export default function TeamSection() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-24 px-6 section-overlay">
       <div className="max-w-7xl mx-auto">
         <SectionTitle label="Leadership" subtitle="The founders and engineers building VajrX Technology.">
           Our Team

@@ -15,7 +15,7 @@ const values = [
   },
   {
     title: "Operational Relevance",
-    description: "We do not build for portfolios or demonstrations. We build for deployment — in hospitals, in defence installations, in research environments. Real-world utility is the only metric that matters.",
+    description: "We do not build for portfolios or demonstrations. We build for deployment: in hospitals, in defence installations, in research environments. Real world utility is the only metric that matters.",
   },
   {
     title: "Transparent Process",
@@ -26,14 +26,14 @@ const values = [
 const roadmapItems = [
   {
     title: "National Lightning Network",
-    timeline: "2025 — 2026",
-    desc: "Deploy a decentralized, NavIC-integrated Time-of-Arrival lightning location network across India using our indigenous sensor nodes. Target coverage: major meteorological zones.",
+    timeline: "2025 to 2026",
+    desc: "Deploy a decentralized, NavIC integrated Time of Arrival lightning location network across India using our indigenous sensor nodes. Target coverage: major meteorological zones.",
     status: "Planned",
   },
   {
     title: "Clinical AI Deployment",
-    timeline: "2025 — Ongoing",
-    desc: "Validate and deploy our airway assessment ML model in hospital pre-operative workflows. Phase 1: clinical validation. Phase 2: hospital system integration.",
+    timeline: "2025 Ongoing",
+    desc: "Validate and deploy our airway assessment ML model in hospital pre operative workflows. Phase 1: clinical validation. Phase 2: hospital system integration.",
     status: "In Progress",
   },
   {
@@ -45,7 +45,7 @@ const roadmapItems = [
   {
     title: "Product Commercialization",
     timeline: "2026+",
-    desc: "Transition from project-based work to commercializing core IP — starting with the lightning detection sensor node as a standalone deployable product.",
+    desc: "Transition from project based work to commercializing core IP, starting with the lightning detection sensor node as a standalone deployable product.",
     status: "Roadmap",
   },
 ];
@@ -67,7 +67,7 @@ export default function AboutPage() {
                 VajrX Technology is a startup building indigenous solutions across Electronics, Defence, and Medical domains. We take ideas and turn them into precision-engineered realities.
               </p>
               <p className="text-muted/70 text-base leading-relaxed max-w-2xl">
-                Founded by engineers from Jabalpur Engineering College with hands-on experience at ISRO, DRDO, and defence institutions — VajrX Technology was built on the conviction that India can and should manufacture the systems it currently imports.
+                Founded by engineers from Jabalpur Engineering College with hands on experience at ISRO, DRDO, and defence institutions. VajrX Technology was built on the conviction that India can and should manufacture the systems it currently imports.
               </p>
             </motion.div>
           </div>
@@ -86,7 +86,7 @@ export default function AboutPage() {
                 <p className="font-mono text-xs text-accent tracking-widest uppercase mb-4">Mission</p>
                 <h2 className="font-display font-bold text-3xl text-foreground mb-5">What We Are Here to Do</h2>
                 <p className="text-muted leading-relaxed mb-4">
-                  To develop cost-effective, high-reliability indigenous technology solutions that reduce India's dependence on imported systems — across defence, electronics, and medical domains.
+                  To develop cost effective, high reliability indigenous technology solutions that reduce India's dependence on imported systems across defence, electronics, and medical domains.
                 </p>
                 <p className="text-muted/70 text-sm leading-relaxed">
                   We build what others import. Every project is a proof point that Indian engineering capability is world-class when given the resources and structure to demonstrate it.
@@ -102,10 +102,10 @@ export default function AboutPage() {
                 <p className="font-mono text-xs text-accent tracking-widest uppercase mb-4">Vision</p>
                 <h2 className="font-display font-bold text-3xl text-foreground mb-5">Where We Are Going</h2>
                 <p className="text-muted leading-relaxed mb-4">
-                  To become a formidable participant in India's next-generation engineering landscape — a company known for precision, resilience, and strategic relevance.
+                  To become a formidable participant in India's next generation engineering landscape, a company known for precision, resilience, and strategic relevance.
                 </p>
                 <p className="text-muted/70 text-sm leading-relaxed">
-                  We envision a future where Indian-made technology sets the global standard in critical domains. VajrX Technology is building the foundation for that future.
+                  We envision a future where Indian made technology sets the global standard in critical domains. VajrX Technology is building the foundation for that future.
                 </p>
               </motion.div>
             </div>

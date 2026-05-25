@@ -25,10 +25,10 @@ export default function CTABanner() {
                 Have a project that needs building?
               </h2>
               <p className="text-muted text-base leading-relaxed max-w-xl mb-2">
-                We work with individuals, institutions, and organisations to turn technical ideas into engineered realities. Defence, electronics, medical — if it requires precision engineering, we want to hear about it.
+                We work with individuals, institutions, and organisations to turn technical ideas into engineered realities. Defence, electronics, medical: if it requires precision engineering, we want to hear about it.
               </p>
               <p className="text-muted/60 text-sm leading-relaxed max-w-xl">
-                Submissions are reviewed within 24–48 hours. We evaluate every idea seriously, regardless of scale.
+                Submissions are reviewed within 24 to 48 hours. We evaluate every idea seriously, regardless of scale.
               </p>
             </div>
 

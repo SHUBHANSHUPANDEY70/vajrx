@@ -85,7 +85,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 8, 0.55);
+  background: rgba(0, 0, 8, 0.72);
   pointer-events: none;
   z-index: 0;
 }

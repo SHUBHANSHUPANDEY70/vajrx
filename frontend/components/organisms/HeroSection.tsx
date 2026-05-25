@@ -12,7 +12,7 @@ const stats = [
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      <div className="absolute inset-0 z-[2] pointer-events-none bg-gradient-to-br from-black/50 via-black/20 to-black/10" />
+      <div className="absolute inset-0 z-[2] pointer-events-none bg-gradient-to-br from-black/70 via-black/40 to-black/20" />
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent z-[3]" />
 
       <div className="relative z-[4] max-w-7xl mx-auto px-4 sm:px-6 py-24 sm:py-32 w-full">
@@ -58,7 +58,7 @@ export default function HeroSection() {
               transition={{ duration: 0.7, delay: 0.35 }}
               className="text-muted/70 text-base leading-relaxed max-w-xl mb-10"
             >
-              India imports over $13 billion in defence and electronics equipment annually. We exist to change that — one precision-engineered system at a time.
+              India imports over $13 billion in defence and electronics equipment annually. We exist to change that, one precision engineered system at a time.
             </motion.p>
 
             <motion.div
