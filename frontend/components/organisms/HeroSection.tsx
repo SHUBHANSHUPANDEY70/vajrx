@@ -37,9 +37,9 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-              className="font-display font-bold leading-[0.95] tracking-tight mb-6"
+              className="font-display font-bold leading-[1.05] tracking-tight mb-6"
             >
-              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hero-gradient-text">Forged for</span>
+              <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl hero-gradient-text pb-1">Forged for</span>
               <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-accent">the Frontier.</span>
             </motion.h1>
 
